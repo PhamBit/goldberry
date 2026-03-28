@@ -50,4 +50,4 @@ This diagnostic operates within the grammatical conditions it identifies. "Nomin
 
 ## Important
 
-The Suffixscape is Cogniosynthesis Ltd intellectual property. The morphological framework was developed by Rosemary Loveday Northover.
+The Suffixscape is Cogniosynthesis Ltd intellectual property.

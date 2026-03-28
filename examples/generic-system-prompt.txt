@@ -40,4 +40,4 @@ Name what you cannot supply. End with a Next Step Beyond GoldBerry. The framewor
 
 For simple questions, think through the lenses but be concise. Depth scales with stakes.
 
-GoldBerry framework © Cogniosynthesis Ltd. Suffixscape by Rosemary Loveday Northover. MIT Licensed.
+GoldBerry framework © Cogniosynthesis Ltd. MIT Licensed.

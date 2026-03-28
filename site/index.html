@@ -59,7 +59,8 @@
 
     header .subtitle {
       font-size: 1.25rem;
-      color: var(--ink-soft);
+      color: var(--ink);
+      opacity: 0.75;
       font-style: italic;
       max-width: 38em;
       margin: 0 auto;
@@ -150,8 +151,8 @@
     /* ── Lenses Grid ── */
     .lenses {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
       margin: 2rem 0;
     }
 
@@ -159,7 +160,7 @@
       background: white;
       border: 1px solid var(--gold-light);
       border-radius: 6px;
-      padding: 1.3rem 1.5rem;
+      padding: 1.5rem 1.6rem;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
@@ -170,23 +171,28 @@
 
     .lens-card .lens-head {
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--ink);
       margin-bottom: 0.3rem;
     }
 
     .lens-card .lens-corrects {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--ink-soft);
       font-style: italic;
     }
 
     .lens-card .lens-ask {
       font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--river);
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .lens-card:last-child {
+      grid-column: 1 / -1;
     }
 
     /* ── Horizon Section ── */
@@ -225,7 +231,7 @@
     /* ── Platform Grid ── */
     .platform-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       margin: 2rem 0;
     }
@@ -234,7 +240,7 @@
       background: white;
       border: 1px solid var(--gold-light);
       border-radius: 6px;
-      padding: 1.2rem;
+      padding: 1.3rem 1.2rem;
       text-align: center;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
@@ -272,7 +278,7 @@
       border: 1px solid var(--gold-light);
       border-radius: 6px;
       padding: 1.5rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
       transition: border-color 0.2s;
     }
 
@@ -315,15 +321,15 @@
     }
 
     .how-block ol {
-      margin: 0.8rem 0 0 1.2rem;
-      line-height: 1.9;
+      margin: 0.8rem 0 0 1.4rem;
+      line-height: 2.1;
     }
 
     /* ── Footer ── */
     footer {
       text-align: center;
-      padding: 3rem 2rem 4rem;
-      border-top: 2px solid var(--gold-light);
+      padding: 3.5rem 2rem 4rem;
+      border-top: 3px solid var(--gold);
       background: var(--gold-pale);
     }
 
@@ -345,6 +351,8 @@
       header h1 { font-size: 2.2rem; }
       section { padding: 3rem 1.2rem; }
       nav a { margin: 0 0.6em; font-size: 0.75rem; }
+      .lenses { grid-template-columns: 1fr; }
+      .platform-grid { grid-template-columns: 1fr; }
     }
 
     /* ── Subtle animation ── */
@@ -683,7 +691,7 @@
 <footer>
   <p><span class="strawberry-icon" style="font-size:1.6rem;">🍓</span></p>
   <p><em>The framework points toward the river. The river is not in the framework.</em></p>
-  <div class="ip">All intellectual property &copy; Cogniosynthesis Ltd. The Suffixscape was developed by Rosemary Loveday Northover.</div>
+  <div class="ip">All intellectual property &copy; Cogniosynthesis Ltd.</div>
 </footer>
 
 </body>

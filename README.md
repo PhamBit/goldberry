@@ -127,7 +127,7 @@ See the [`examples/`](examples/) directory for ready-to-use configurations for e
 
 ## The Suffixscape
 
-The Suffixscape (Northover, 2025) is GoldBerry's linguistic diagnostic layer. It detects:
+The Suffixscape is GoldBerry's linguistic diagnostic layer. It detects:
 
 - **Nominalised Evasion** — "the implementation of transformational community empowerment strategies" → Who implements? Who is empowered? The grammar claims action while structurally preventing it.
 - **Agency Diffusion** — "It was determined that the service would be restructured" → Who determined? By what authority?
@@ -152,12 +152,14 @@ No individual lens below 25/100 is acceptable regardless of overall score. High 
 
 ## Provenance & Limits
 
+GoldBerry was not designed in the abstract. It was extracted from real work — 12,000+ news corrections through CognioNews, institutional audits through CognioPublic, coalition intelligence across 58 organisations through CognioBridge, legislative mapping through CognioEnacted, and bilingual governance research through CognioCymru. The agent identity was formalised from patterns that proved themselves under operational conditions. See [PROVENANCE.md](PROVENANCE.md) for the full development history.
+
 This framework is rooted in Western critical humanities. Its theoretical sources — Haraway, Heidegger, Foucault, Spivak, Nietzsche, Appadurai, Gellner, Descola — operate within or in response to European academic philosophy. GoldBerry advocates for epistemic plurality *from within one tradition*. It is not a substitute for direct engagement with the traditions it names.
 
 Epistemic completeness is asymptotic — a horizon, not a destination. No analysis reaches 10/10 except as a statement of ambition.
 
 The framework synthesises:
-- **The Suffixscape** (Northover) — morphological analysis of how meaning settles in language
+- **The Suffixscape**— morphological analysis of how meaning settles in language
 - **Civilisational Memory Recovery** (Lewis) — temporal depth and historical contextualisation
 - **The Cogniosynthetic Corrective** — seven-lens methodology applied to real-world knowledge
 
@@ -198,4 +200,4 @@ The lenses are a selection, not an exhaustion. The framework has edges. Help us 
 
 *The framework points toward the river. The river is not in the framework.*
 
-*© Cogniosynthesis Ltd. The Suffixscape was developed by Rosemary Loveday Northover.*
+*© Cogniosynthesis Portal Ltd.*
