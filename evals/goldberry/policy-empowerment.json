@@ -1,0 +1,28 @@
+{
+  "corrected_framing": "The sentence does not simply describe reform. It performs legitimacy through abstract nouns while withholding key information about action, authority, and accountability.",
+  "executive_summary": "The statement creates the appearance of purposeful change but provides almost no operational clarity. It implies that empowerment will be delivered from above through modernisation and capacity-building, yet it does not identify who acts, who decides, how success will be measured, or whether communities shaped the agenda.",
+  "power_knowledge_audit": "This is institutional language designed to sound constructive while minimising contestable detail. Its grammar makes challenge harder by replacing named actors and concrete commitments with abstract, positively coded nouns.",
+  "whats_missing": {
+    "indigenous_knowledge": "No sign that locally grounded ways of organising or knowing shaped the programme.",
+    "deep_history": "No indication whether this follows previous failed reform cycles presented in similar language.",
+    "cross_cultural_wisdom": "'Community' is treated as a stable, shared category rather than something culturally and politically variable.",
+    "scientific_evidence": "No evidence base, metric, or evaluation criteria are named.",
+    "artistic_perception": "No sense of how this change will be felt by the people governed by it.",
+    "future_modelling": "No attention to implementation drift, bureaucratic burden, or future exclusion effects.",
+    "marginalised_voices": "The named beneficiaries are not visible as speaking subjects."
+  },
+  "cross_cultural_analysis": "The sentence assumes a managerial model of change in which institutions deliver empowerment to communities. Other traditions might treat empowerment as something communities define and enact, not something granted through administrative redesign.",
+  "synthesis": "The sentence is a compact example of nominalised evasion: it sounds active, but structurally obscures action.",
+  "solution_pathways": [
+    "Rewrite with named actors, timelines, and authority.",
+    "Specify what 'empowerment' means operationally.",
+    "State how affected communities shaped the programme and how they can challenge it."
+  ],
+  "cmr_score": "4-5",
+  "score_caveat": "Framework-internal qualitative assessment only; not an externally validated score.",
+  "lens_limitations": [
+    "GoldBerry cannot infer intent from one sentence alone.",
+    "GoldBerry identifies concealment risk, not motive."
+  ],
+  "next_step_beyond_goldberry": "Read the underlying programme documents, budget lines, consultation records, and accountability mechanisms."
+}

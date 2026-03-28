@@ -1,0 +1,28 @@
+{
+  "corrected_framing": "This is not yet a general story about educational transformation. It is a narrow finding from a socially selective setting being rhetorically expanded toward scale.",
+  "executive_summary": "The abstract may report a genuine positive result, but its implied horizon is much larger than its evidence base. Two elite schools over six weeks cannot, on their own, ground broad claims about educational transformation across varied infrastructures, cultures, and student populations.",
+  "power_knowledge_audit": "The abstract privileges measurable outcome improvement and the authority of formal study design. That matters, but it can also sideline questions about who benefits first, which learning practices are counted, and what institutional conditions made the intervention succeed.",
+  "whats_missing": {
+    "indigenous_knowledge": "No non-formal or community-rooted conceptions of learning are visible.",
+    "deep_history": "No historical account of how educational inequality shapes who can benefit from new learning technologies.",
+    "cross_cultural_wisdom": "The implied model of success may be culturally narrow.",
+    "scientific_evidence": "Statistical significance is not generalisability; site selection and duration matter.",
+    "artistic_perception": "No attention to how learning feels, not just how it scores.",
+    "future_modelling": "Scaling may widen inequality if resource-rich schools adopt first.",
+    "marginalised_voices": "Students, parents, teachers, and under-resourced schools are not present as knowledge-bearing voices."
+  },
+  "cross_cultural_analysis": "The abstract appears to assume that learning improvement is captured primarily through measurable short-term outcomes. Other educational traditions may place more emphasis on relation, belonging, moral formation, or collective learning.",
+  "synthesis": "The result may be promising, but the route from local success to systemic transformation is exactly where GoldBerry is useful: it interrupts that rhetorical leap.",
+  "solution_pathways": [
+    "Replicate in non-elite and under-resourced settings.",
+    "Add qualitative evidence from students and teachers.",
+    "Report deployment constraints, not only effect sizes."
+  ],
+  "cmr_score": "5-6",
+  "score_caveat": "Framework-internal qualitative assessment only; not an externally validated score.",
+  "lens_limitations": [
+    "GoldBerry cannot adjudicate the statistical quality of the study without the full paper and methodology.",
+    "GoldBerry cannot replace educational expertise or contextual field knowledge."
+  ],
+  "next_step_beyond_goldberry": "Read the full paper, sampling design, intervention details, and qualitative follow-up evidence before drawing policy conclusions."
+}

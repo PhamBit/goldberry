@@ -1,0 +1,28 @@
+{
+  "corrected_framing": "This is not just a story about congestion reduction. It is a story about how urban mobility is being politically defined through optimisation metrics that may privilege some forms of movement and some populations over others.",
+  "executive_summary": "The article presents the traffic system as a neutral efficiency upgrade, but its frame is narrow. It privileges official, vendor, and consultant voices; treats projected gains as if they are close to outcomes; and leaves unasked what forms of mobility, surveillance, enforcement, and public accountability are being reorganised by the system.",
+  "power_knowledge_audit": "The quoted voices are institutional and commercial. The framing therefore centres those with authority to procure and narrate the system, not those who will live under it. Terms like 'optimisation' and 'efficiency' appear neutral but encode political choices about whose time, movement, and inconvenience count.",
+  "whats_missing": {
+    "indigenous_knowledge": "No local, situated, street-level knowledge from communities who experience the road network differently.",
+    "deep_history": "No acknowledgement of how past transport investment and planning decisions shaped current congestion and exclusion.",
+    "cross_cultural_wisdom": "No challenge to the assumption that throughput is the universal measure of a good mobility system.",
+    "scientific_evidence": "Projected gains are cited without public methodology, uncertainty, or implementation constraints.",
+    "artistic_perception": "The lived feel of streets, waiting, noise, stress, and safety is absent.",
+    "future_modelling": "No attention to enforcement drift, vendor lock-in, or second-order effects on non-drivers.",
+    "marginalised_voices": "Disabled residents, bus users, pedestrians, low-income neighbourhoods, and people likely to be disproportionately surveilled are absent."
+  },
+  "cross_cultural_analysis": "The article reflects a technocratic urban-management frame in which mobility is a systems problem to be optimised. Other traditions might begin from care, habitability, accessibility, or communal use rather than throughput alone.",
+  "synthesis": "The article is not false. It is incomplete in a patterned way: public authority and vendor language compress political questions into technical ones.",
+  "solution_pathways": [
+    "Publish the optimisation criteria and evaluation plan.",
+    "Include disability, pedestrian, and public-transport user perspectives in public review.",
+    "Audit surveillance, enforcement, and neighbourhood-distribution impacts before expansion."
+  ],
+  "cmr_score": "5-6",
+  "score_caveat": "Framework-internal qualitative assessment only; not an externally validated score.",
+  "lens_limitations": [
+    "GoldBerry cannot determine the technical quality of the system without engineering evidence and deployment data.",
+    "GoldBerry cannot substitute for direct consultation with affected communities."
+  ],
+  "next_step_beyond_goldberry": "Review procurement documents, technical methodology, and direct testimony from residents and transport-access groups."
+}
