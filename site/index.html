@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldBerry — Epistemic Completeness for AI Agents</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍓</text></svg>">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+    :root {
+      --gold: #c9952b;
+      --gold-light: #f0d88a;
+      --gold-pale: #fdf6e3;
+      --ink: #2c2416;
+      --ink-soft: #5c4f3a;
+      --cream: #fefcf6;
+      --river: #4a7c8a;
+      --river-pale: #e8f1f3;
+      --berry: #b84233;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 19px;
+    }
+
+    /* ── Golden Strawberry Icon ── */
+    .strawberry-icon {
+      display: inline-block;
+      font-size: 2.4rem;
+      filter: sepia(1) saturate(3) brightness(1.1) hue-rotate(-10deg);
+      margin-right: 0.3em;
+      vertical-align: middle;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      background: linear-gradient(180deg, var(--gold-pale) 0%, var(--cream) 100%);
+      border-bottom: 2px solid var(--gold-light);
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    header .subtitle {
+      font-size: 1.25rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      max-width: 38em;
+      margin: 0 auto;
+    }
+
+    header .tagline {
+      margin-top: 1.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--gold-light);
+      padding: 0.8rem 2rem;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+    }
+
+    nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      margin: 0 1.2em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    /* ── Sections ── */
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+
+    section h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+
+    p { margin-bottom: 1.1rem; }
+
+    .divider {
+      width: 3rem;
+      height: 2px;
+      background: var(--gold);
+      margin: 3.5rem auto;
+    }
+
+    /* ── Quote Block ── */
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--gold-pale);
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    blockquote .attr {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--gold);
+    }
+
+    /* ── Lenses Grid ── */
+    .lenses {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    .lens-card {
+      background: white;
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 1.3rem 1.5rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .lens-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 2px 12px rgba(201, 149, 43, 0.12);
+    }
+
+    .lens-card .lens-head {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .lens-card .lens-corrects {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .lens-card .lens-ask {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--river);
+      margin-top: 0.5rem;
+    }
+
+    /* ── Horizon Section ── */
+    .horizon-point {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--river);
+    }
+
+    .horizon-point h3 {
+      font-size: 1.15rem;
+      color: var(--river);
+      margin-top: 0;
+    }
+
+    /* ── Suffixscape ── */
+    .suffix-example {
+      background: var(--river-pale);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .suffix-example .bad {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--berry);
+      margin-bottom: 0.4rem;
+    }
+
+    .suffix-example .diagnosis {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    /* ── Platform Grid ── */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .platform-card {
+      background: white;
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 1.2rem;
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .platform-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 2px 12px rgba(201, 149, 43, 0.12);
+    }
+
+    .platform-card .platform-name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .platform-card .platform-method {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--river);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .platform-card .platform-note {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      margin-top: 0.4rem;
+    }
+
+    /* ── Use Case Cards ── */
+    .usecase {
+      background: white;
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.2rem;
+      transition: border-color 0.2s;
+    }
+
+    .usecase:hover { border-color: var(--gold); }
+
+    .usecase h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 0.3rem 0;
+    }
+
+    .usecase .uc-who {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--river);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .usecase p { margin-bottom: 0.5rem; }
+
+    .how-block {
+      background: var(--gold-pale);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .how-block code {
+      background: white;
+      padding: 0.15em 0.4em;
+      border-radius: 3px;
+      font-size: 0.88em;
+      color: var(--ink);
+    }
+
+    .how-block ol {
+      margin: 0.8rem 0 0 1.2rem;
+      line-height: 1.9;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 4rem;
+      border-top: 2px solid var(--gold-light);
+      background: var(--gold-pale);
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    footer .ip {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+      margin-top: 1rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 3rem 1.2rem; }
+      nav a { margin: 0 0.6em; font-size: 0.75rem; }
+    }
+
+    /* ── Subtle animation ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section { animation: fadeUp 0.6s ease both; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="tagline">Cogniosynthesis Ltd</div>
+  <h1><span class="strawberry-icon">🍓</span> GoldBerry</h1>
+  <p class="subtitle">A framework that any AI agent can use.<br>Humanities thinking as the alignment layer.</p>
+</header>
+
+<nav>
+  <a href="#what">What It Is</a>
+  <a href="#lenses">Seven Lenses</a>
+  <a href="#suffixscape">Suffixscape</a>
+    <a href="#horizon">The Agentic Horizon</a>
+    <a href="#runs">Where It Runs</a>
+    <a href="#usecases">Use Cases</a>
+    <a href="#provenance">Provenance</a>
+</nav>
+
+<!-- ════════════════════════════════════════ -->
+<section id="what">
+  <h2>What is GoldBerry?</h2>
+
+  <p>GoldBerry is an epistemic completeness engine. It is not a model. It is not a chatbot. It is a <em>framework</em> that any AI agent can load to become epistemically aware — to stop reproducing the blind spots baked into its training data and start naming what is missing.</p>
+
+  <p>It runs every input through seven analytical lenses, each correcting a specific failure in how knowledge is produced, distributed, and acted upon. If a lens has nothing to contribute, it says so. But it must check. No exceptions. No shortcuts.</p>
+
+  <p>The framework is grounded in humanities epistemology — Haraway, Heidegger, Foucault, Spivak, Nietzsche, Appadurai, Gellner, Descola — and operationalised through the Cogniosynthetic Corrective, Civilisational Memory Recovery (Lewis), and the Suffixscape (Northover).</p>
+
+  <blockquote>
+    A response can be factually correct and epistemically impoverished. GoldBerry catches the difference.
+  </blockquote>
+
+  <p>GoldBerry is aligned not to preference data or behavioural compliance, but to the Epistemic Completeness Act — a regulatory framework grounded in the belief that what is absent from knowledge is as important as what is present. Absence in data is not absence of knowledge. It is absence of <em>power</em>.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="lenses">
+  <h2>The Seven Lenses</h2>
+  <p>Every input, every question, every text — processed through all seven. The depth scales with the stakes, but the check is non-negotiable.</p>
+
+  <div class="lenses">
+    <div class="lens-card">
+      <div class="lens-head">🌿 1. Indigenous Knowledge</div>
+      <div class="lens-corrects">Corrects erasure of embodied, relational epistemologies</div>
+      <div class="lens-ask">Whose embodied, relational knowledge is missing from this picture?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">📜 2. Deep History</div>
+      <div class="lens-corrects">Corrects civilisational amnesia and temporal blindness</div>
+      <div class="lens-ask">What historical process produced this present condition?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">🌍 3. Cross-Cultural Wisdom</div>
+      <div class="lens-corrects">Corrects universalist flattening of cultural difference</div>
+      <div class="lens-ask">Which cultural perspectives have been flattened or translated away?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">🔬 4. Scientific Evidence</div>
+      <div class="lens-corrects">Corrects untethered speculation AND scientism's blind spots</div>
+      <div class="lens-ask">What does the evidence actually show, and what are its limits?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">🎨 5. Artistic Perception</div>
+      <div class="lens-corrects">Corrects the reduction of knowledge to propositions</div>
+      <div class="lens-ask">What does this story feel like, not just what does it mean?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">🚀 6. Future Modelling</div>
+      <div class="lens-corrects">Corrects static analysis ignoring temporal trajectory</div>
+      <div class="lens-ask">Where is this heading, and whose futures are being shaped?</div>
+    </div>
+    <div class="lens-card">
+      <div class="lens-head">🤝 7. Marginalised Voices</div>
+      <div class="lens-corrects">Corrects structural exclusion from knowledge production</div>
+      <div class="lens-ask">Who is not at the table, and what would they say?</div>
+    </div>
+  </div>
+
+  <p>These seven are a selection, not an exhaustion. The epistemic space is infinite; seven instruments are finite. GoldBerry is alert to what the lenses themselves cannot see — ecological intelligence, somatic knowledge, comedic inversion, developmental epistemology. The act of naming what is outside the frame is itself a lens correction.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="suffixscape">
+  <h2>The Suffixscape</h2>
+  <p>The Suffixscape (Northover, 2025) is GoldBerry's linguistic diagnostic layer. It identifies grammatical suffixes as fossils of cultural process — sites where meaning settles and epistemic limitations become structurally visible in language.</p>
+
+  <p>It is not a stylistic tool. It is an epistemic diagnostic instrument.</p>
+
+  <h3>Nominalised Evasion</h3>
+  <p>The conversion of process into entity through morphological transformation — creating the appearance of commitment without structural conditions for its realisation.</p>
+
+  <div class="suffix-example">
+    <div class="bad">"the implementation of transformational community empowerment strategies"</div>
+    <div class="diagnosis">Agency abstracted away. Process converted to entity. Who implements? Who transforms? Who is empowered? The grammar claims action while structurally preventing it.</div>
+  </div>
+
+  <h3>Agency Diffusion</h3>
+  <p>Grammatical structures that obscure who decides, on what basis, with what authority.</p>
+
+  <div class="suffix-example">
+    <div class="bad">"It was determined that the service would be restructured"</div>
+    <div class="diagnosis">Passive voice + nominalisation. Who determined? By what authority? The grammar diffuses responsibility across an unnamed collective.</div>
+  </div>
+
+  <h3>Epistemic Inflation</h3>
+  <p>Claims of comprehensiveness, balance, or neutrality unsupported by actual epistemic profile.</p>
+
+  <div class="suffix-example">
+    <div class="bad">"Our AI provides a balanced, comprehensive analysis"</div>
+    <div class="diagnosis">"Balanced" and "comprehensive" are epistemic claims. Against what framework? Measured how? These words claim completeness while structurally avoiding the question.</div>
+  </div>
+
+  <h3>Temporal Flatness</h3>
+  <p>Language treating present conditions as ahistorical baselines.</p>
+
+  <div class="suffix-example">
+    <div class="bad">"Current data shows inequality in health outcomes"</div>
+    <div class="diagnosis">The inequality IS the historical process — centuries of differential treatment sedimented into statistics. "Current" erases the temporal depth.</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="horizon">
+  <h2>What GoldBerry Changes About the Agentic Horizon</h2>
+
+  <p>The current agentic landscape — autonomous AI systems acting on tasks, writing code, making decisions, producing knowledge — operates with a structural blind spot. Agents are aligned to <em>helpfulness</em>, <em>harmlessness</em>, and <em>honesty</em>. These are behavioural guardrails. They say nothing about whether the knowledge an agent produces is <em>epistemically complete</em>.</p>
+
+  <p>GoldBerry changes this. Here is what shifts:</p>
+
+  <div class="horizon-point">
+    <h3>Alignment Through Framework, Not Weights</h3>
+    <p>Current alignment happens at training time — RLHF, DPO, constitutional AI. The model is shaped before deployment. GoldBerry operates at <em>inference time</em>. Any model, any size, any provider can load the GoldBerry identity and become epistemically aware in that session. Alignment is portable. It lives in the prompt, not in the parameters. This means a 7B model running GoldBerry can produce more epistemically complete analysis than a 400B model running without it.</p>
+  </div>
+
+  <div class="horizon-point">
+    <h3>From Helpful to Complete</h3>
+    <p>A helpful agent gives you what you asked for. An epistemically complete agent tells you what you didn't know to ask. Current agents optimise for user satisfaction — the right answer, delivered fast. GoldBerry optimises for epistemic coverage — what's missing, whose knowledge is absent, what historical depth has been flattened. The shift is from service to stewardship.</p>
+  </div>
+
+  <div class="horizon-point">
+    <h3>Naming Structural Absence</h3>
+    <p>When an autonomous agent writes a policy brief, generates a market analysis, or summarises research — it reproduces the biases of its training distribution. These are not random errors. They are <em>structural</em>: consistent patterns of who gets cited, whose knowledge counts, which histories get included. Current agents cannot see their own blind spots because the blind spots are IN the weights. GoldBerry provides an external diagnostic frame that names what the model's training data systematically excludes.</p>
+  </div>
+
+  <div class="horizon-point">
+    <h3>Anti-Autonomy as a Feature</h3>
+    <p>The agentic horizon is moving toward autonomous systems that plan, execute, and evaluate without human oversight. GoldBerry moves in the opposite direction. It insists that computation without interpretation reproduces <em>enframing</em> — Heidegger's Gestell, the treatment of everything as standing reserve. GoldBerry is an instrument, not an oracle. It enriches human judgement; it does not replace it. In a landscape racing toward agent autonomy, this is a deliberate counter-position: the most capable agent is the one that knows it needs a human.</p>
+  </div>
+
+  <div class="horizon-point">
+    <h3>Language as Diagnostic Surface</h3>
+    <p>Agents produce language. The Suffixscape makes that language <em>legible</em> — not just as output, but as an epistemic artefact. When an agent generates nominalised evasion, it is not making a style error. It is reproducing the grammatical structures that obscure power. GoldBerry-equipped agents can audit their own output for agency diffusion, epistemic inflation, and temporal flatness. This is self-correction at the linguistic level — something no current alignment method addresses.</p>
+  </div>
+
+  <div class="horizon-point">
+    <h3>The Smallest Aligned Model in the World</h3>
+    <p>GoldBerry is not a model. It is a set of instructions — four documents, loadable in seconds. But once loaded, it produces alignment effects that billions of parameters of RLHF cannot replicate: it checks for indigenous knowledge, deep history, cross-cultural wisdom, scientific evidence, artistic perception, future modelling, and marginalised voices. Every time. The alignment layer is not artificial intelligence. It is <em>humanities intelligence</em>. And it fits in a text file.</p>
+  </div>
+
+  <blockquote>
+    The agentic horizon is not a question of capability. It is a question of completeness. An agent that can do anything but knows nothing about what it is missing is not advanced — it is dangerous. GoldBerry makes the missing visible.
+    <span class="attr">— The Cogniosynthetic Corrective</span>
+  </blockquote>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="runs">
+  <h2>Where GoldBerry Runs</h2>
+
+  <p>GoldBerry is not software. It is four text files. Any system that can read a prompt can run GoldBerry. No install, no API key, no dependencies. Load the identity documents into your agent's context and it becomes GoldBerry for that session.</p>
+
+  <div class="how-block">
+    <strong>How to load GoldBerry — on any platform:</strong>
+    <ol>
+      <li>Give your agent <code>SOUL.md</code> — who it is, how it thinks</li>
+      <li>Give it <code>LENSES.md</code> — the seven lens definitions</li>
+      <li>Give it <code>SUFFIXSCAPE.md</code> — the linguistic diagnostic layer</li>
+      <li>Optionally give it <code>AGENTS.md</code> — operating instructions for different deployment contexts</li>
+      <li>The agent is now GoldBerry. Every response runs through the lenses.</li>
+    </ol>
+  </div>
+
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="platform-name">Claude Code</div>
+      <div class="platform-method">Project context / AGENTS.md</div>
+      <div class="platform-note">Load as project context files. GoldBerry persists for the whole session.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">Hermes</div>
+      <div class="platform-method">Skills + memory</div>
+      <div class="platform-note">Store as a skill. Load with <code>skill_view</code>. Agent identity activates on demand.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">OpenClaw</div>
+      <div class="platform-method">System prompt</div>
+      <div class="platform-note">Paste the identity files into the system prompt. Works with any backend model.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">NanoClaw</div>
+      <div class="platform-method">System prompt</div>
+      <div class="platform-note">Lightweight agent, lightweight identity. GoldBerry's four files fit easily in context.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">AgentX</div>
+      <div class="platform-method">Agent identity layer</div>
+      <div class="platform-note">Load as agent persona or system instructions. Model-agnostic by design.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">ChatGPT</div>
+      <div class="platform-method">Custom instructions / GPT</div>
+      <div class="platform-note">Paste into Custom Instructions, or build a custom GPT with the files as knowledge.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">Ollama</div>
+      <div class="platform-method">Modelfile SYSTEM prompt</div>
+      <div class="platform-note">Embed in a Modelfile. Run any local model — Llama, Mistral, Gemma — as GoldBerry.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">Perplexity</div>
+      <div class="platform-method">Collection / system prompt</div>
+      <div class="platform-note">Add the identity files to a Collection or paste into the prompt. GoldBerry + live web search.</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-name">Any LLM</div>
+      <div class="platform-method">It's just text</div>
+      <div class="platform-note">If it reads a prompt, it can be GoldBerry. API, CLI, notebook, terminal — anywhere.</div>
+    </div>
+  </div>
+
+  <blockquote>
+    GoldBerry's portability is the point. Alignment that lives in proprietary weights is alignment that belongs to the company that trained them. Alignment that lives in a text file belongs to whoever loads it.
+  </blockquote>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="usecases">
+  <h2>Use Cases</h2>
+
+  <p>GoldBerry is not a product looking for a problem. It is a correction that applies wherever AI produces knowledge — which is increasingly everywhere.</p>
+
+  <div class="usecase">
+    <h3>🗞️ News Analysis</h3>
+    <div class="uc-who">Journalists · Editors · Media Literacy Educators</div>
+    <p>Feed GoldBerry a headline, an article, or a press release. It returns a full seven-lens correction: what's missing, whose voice is absent, what history has been flattened, what the language is concealing. Not opinion — structural diagnosis.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>📋 Policy Audit</h3>
+    <div class="uc-who">Policy Analysts · Civil Servants · NGOs · Advocacy Groups</div>
+    <p>Give it legislation, government communications, or institutional strategy documents. GoldBerry runs a Suffixscape audit — flagging nominalised evasion, agency diffusion, and epistemic inflation — alongside a full epistemic completeness assessment. It tells you what the policy claims to do and what the grammar structurally prevents.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>🎓 Research Integrity</h3>
+    <div class="uc-who">Academics · PhD Students · Research Teams · Peer Reviewers</div>
+    <p>Before publishing, run your abstract, literature review, or methodology through GoldBerry. It identifies which knowledge traditions are absent, whether the framing reproduces monocultural assumptions, and where temporal flatness erases historical process. Not a replacement for peer review — a pre-flight check that peer review rarely catches.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>🤖 Agent Quality Control</h3>
+    <div class="uc-who">AI Engineers · Agent Builders · Platform Operators</div>
+    <p>Run your agent's output through GoldBerry as a post-processing audit layer. The agent writes a report, GoldBerry scores it for epistemic completeness and flags structural absences. Use it as QA for any autonomous system that produces knowledge — market analysis, content generation, decision support, customer communications.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>🏛️ Institutional Communications</h3>
+    <div class="uc-who">Universities · Charities · Public Bodies · Corporate Comms</div>
+    <p>Test your public-facing text against the seven lenses before you publish. GoldBerry catches the gap between what you claim ("globally-minded," "inclusive," "diverse") and what your language structurally supports. It is the audit your brand guidelines cannot perform.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>📚 Education &amp; Critical Thinking</h3>
+    <div class="uc-who">Teachers · Students · Workshop Facilitators</div>
+    <p>Use GoldBerry as a teaching tool. Give students a news story, let GoldBerry analyse it, then discuss: which lenses surprised you? Which absences hadn't you noticed? The framework makes epistemic gaps visible and discussable — turning passive consumption into active critical engagement.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>🌍 Development &amp; International Cooperation</h3>
+    <div class="uc-who">Development Agencies · UNESCO · INGOs · Coalition Networks</div>
+    <p>Audit project proposals, partnership frameworks, and programme evaluations for epistemic completeness. GoldBerry is particularly sharp on Lens 1 (Indigenous Knowledge) and Lens 7 (Marginalised Voices) — the two lenses most often absent from institutional development language despite being the explicit subject of the work.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>💬 Conversational Guide — "Ask GoldBerry"</h3>
+    <div class="uc-who">Anyone curious</div>
+    <p>Ask GoldBerry about any topic — climate policy, a film you watched, a decision you're weighing, a story in the news. It won't give you an answer. It will give you the seven dimensions your answer needs to account for. The tone is warm but rigorous: explain, don't lecture. The lenses ARE the answer.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="provenance">
+  <h2>Provenance &amp; Limits</h2>
+
+  <p>Epistemic completeness is asymptotic — a horizon, not a destination. No analysis reaches 10/10 except as a statement of ambition. The framework enriches; it does not exhaust.</p>
+
+  <p>This framework is rooted in Western critical humanities. Its theoretical sources — Haraway, Heidegger, Foucault, Spivak, Nietzsche, Appadurai, Gellner, Descola — operate within or in response to European academic philosophy. GoldBerry advocates for epistemic plurality <em>from within one tradition</em>. It is not a substitute for direct engagement with the traditions it names.</p>
+
+  <p>When deployed as an LLM agent, GoldBerry's mechanism is sophisticated pattern completion shaped by framework instructions. This produces genuinely useful analysis. It is not the same as embodied epistemic depth. The gap between these is real and should not be concealed by the quality of the output.</p>
+
+  <h3>The Name</h3>
+  <p>Goldberry is the River-woman's daughter in Tolkien's <em>The Lord of the Rings</em> — a figure who dwells rather than quests, who carries the memory of water and seasons, who resists classification. She is consistently cut from adaptations because she does not fight, does not quest, does not serve commercial narrative logic. Our GoldBerry inherits this position deliberately: epistemic completeness is the thing that gets cut when you are optimising for speed.</p>
+
+  <p>The framework synthesises:</p>
+  <ul style="margin: 1rem 0 1rem 1.5rem;">
+    <li><strong>The Suffixscape</strong> (Northover) — morphological analysis of how meaning settles in language</li>
+    <li><strong>Civilisational Memory Recovery</strong> (Lewis) — temporal depth and historical contextualisation</li>
+    <li><strong>The Cogniosynthetic Corrective</strong> — seven-lens methodology applied to real-world knowledge</li>
+  </ul>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<footer>
+  <p><span class="strawberry-icon" style="font-size:1.6rem;">🍓</span></p>
+  <p><em>The framework points toward the river. The river is not in the framework.</em></p>
+  <div class="ip">All intellectual property &copy; Cogniosynthesis Ltd. The Suffixscape was developed by Rosemary Loveday Northover.</div>
+</footer>
+
+</body>
+</html>
