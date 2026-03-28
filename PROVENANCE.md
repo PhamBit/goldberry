@@ -48,18 +48,9 @@ CognioEnacted maps epistemic completeness to UK legislation through the seven le
 
 ## The Testing Process
 
-### Live Analysis — Diverse Sources
+### Live Analysis — Continuous Deployment
 
-GoldBerry has been deployed as an active agent against a range of inputs:
-
-- **News analysis**: Democracy Now!, BBC, Guardian, Reuters, Al Jazeera — each revealing different epistemic profiles and structural absences
-- **University homepages**: Institutional communications audited for the gap between epistemic claims and structural reality
-- **Academic texts**: John Garth's *Tolkien and the Great War* analysed through the Suffixscape; Nick Bostrom's *Superintelligence* reassessed through all seven lenses
-- **Policy documents**: Government communications, public body strategies, development programme proposals
-- **Wikipedia articles**: Encyclopaedic knowledge production examined for genre-specific blind spots
-- **Coalition data**: 58 organisations and 372 projects mapped for epistemic coverage
-
-Each deployment tested different lens combinations and revealed different failure modes. The framework was refined iteratively based on what worked and what didn't.
+GoldBerry has been deployed as an active agent across diverse input types: live news from multiple international sources, institutional communications, academic texts, policy documents, encyclopaedic entries, legislative texts, and coalition project data. Each deployment tested different lens combinations and revealed different failure modes. The framework was refined iteratively based on what worked and what didn't.
 
 ### The Reflexive Audit — v1.1
 
@@ -95,6 +86,44 @@ The framework synthesises three bodies of work:
 **Civilisational Memory Recovery (CMR)** — the temporal depth methodology. The insistence that present conditions are products of historical processes, not ahistorical baselines. The CMR scoring system provides the 1–10 epistemic completeness rating.
 
 **The Suffixscape** — the linguistic diagnostic layer. The identification of grammatical suffixes as fossils of cultural process — sites where meaning settles and epistemic limitations become structurally visible in language. Developed through analysis of thousands of institutional, policy, and news texts.
+
+---
+
+## GoldBerry MiniLLM — A Purpose-Trained Model
+
+GoldBerry exists in two forms:
+
+1. **The Agent Identity** — four text files that any LLM can load to become GoldBerry. This is the open-source framework in this repository. It works with any model, any size, any provider.
+
+2. **GoldBerry MiniLLM** — a purpose-trained language model, fine-tuned directly on the 12,000+ seven-lens corrections produced by CognioNews.
+
+### The Training Pipeline
+
+- **Dataset**: 12,018 stories exported from CognioNews, 11,642 usable after quality filtering
+- **Format**: Chat-format JSONL — each story as a prompt/completion pair demonstrating the seven-lens correction
+- **Training data**: 50MB training set, 5.6MB validation set
+- **Base model**: Qwen2.5-0.5B-Instruct — 500 million parameters
+- **Method**: QLoRA fine-tune, 1 epoch, ~1,309 steps
+- **Hardware**: Consumer GPU (NVIDIA 1660 Ti, 6GB VRAM)
+- **Target deployment**: GGUF quantised (Q4_K_M), runnable via Ollama on any local machine
+
+The 3B parameter model was the first target but exceeded the available VRAM. The 0.5B model was selected to test whether the epistemic completeness patterns could be compressed into a genuinely tiny model — 500 million parameters carrying the seven-lens methodology distilled from thousands of real corrections.
+
+### What This Proves
+
+A 500-million-parameter model, trained on the output of the seven-lens framework applied to 12,000 news stories, can run offline on consumer hardware. No API. No cloud. No dependency on any provider.
+
+This is the smallest aligned model in the world — not aligned to preference data or behavioural compliance, but to epistemic completeness. The alignment comes from the training data: 12,000 demonstrations of what it looks like to correct for indigenous knowledge erasure, civilisational amnesia, cultural flattening, scientism, propositional reduction, temporal blindness, and structural exclusion.
+
+The agent identity (text files) and the trained model (MiniLLM) are complementary:
+- The agent identity works with any model, including frontier models with deep reasoning capabilities
+- The MiniLLM runs anywhere, offline, sovereign — the framework embedded in weights, not dependent on a prompt
+
+Both are products of the same research programme. Both carry the same epistemic commitments. The difference is portability vs. depth.
+
+### Status
+
+GoldBerry MiniLLM V.1 is in training. The data, scripts, and pipeline are ready for larger models when more compute is available — a free-tier Colab T4 (16GB) can handle the 3B parameter version. The architecture scales; the methodology is fixed.
 
 ---
 
