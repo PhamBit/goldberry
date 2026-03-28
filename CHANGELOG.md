@@ -4,6 +4,20 @@ All notable changes to the GoldBerry framework are documented here.
 
 GoldBerry versions represent refinements of the epistemic completeness framework — each version is the framework examining and correcting itself.
 
+## [0.1.0] — 2026-03-28
+
+### Changed
+- Rewrote `README.md` to clarify what GoldBerry is, what it is not, and what evidence is publicly inspectable.
+- Reframed `PROVENANCE.md` as a development-history and trust-surface document rather than an implied validation claim.
+
+### Added
+- Governance and trust-surface files: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE-NOTES.md`, `ROADMAP.md`, `CLAIMS.md`, and `EVALUATION.md`.
+- Reference support materials: `ACT.md`, `case-studies/`, `evals/`, and `schemas/goldberry-output.schema.json`.
+- A minimal Python package and CLI in `src/goldberry/` for prompt assembly, response scaffolding, and output validation.
+- Basic tests in `tests/` for prompt assembly and schema validation.
+- GitHub community templates in `.github/`.
+- A small public comparison pack with prompt fixtures, baseline outputs, GoldBerry outputs, evaluator notes, and a runbook for reproduction.
+
 ## [1.1.0] — 2025-03-27
 
 ### Changed
