@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoldBerry — Epistemic Completeness for AI Agents</title>
+  <title>GoldBerry — Structured Epistemic Auditing for AI Outputs</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍓</text></svg>">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
@@ -369,34 +369,34 @@
 <header>
   <div class="tagline">Cogniosynthesis Ltd</div>
   <h1><span class="strawberry-icon">🍓</span> GoldBerry</h1>
-  <p class="subtitle">A framework that any AI agent can use.<br>Humanities thinking as the alignment layer.</p>
+  <p class="subtitle">A documentation-first open-source framework for structured epistemic auditing.<br>Portable identity files, explicit caveats, and inspectable comparisons.</p>
 </header>
 
 <nav>
   <a href="#what">What It Is</a>
   <a href="#lenses">Seven Lenses</a>
   <a href="#suffixscape">Suffixscape</a>
-    <a href="#horizon">The Agentic Horizon</a>
-    <a href="#runs">Where It Runs</a>
-    <a href="#usecases">Use Cases</a>
-    <a href="#provenance">Provenance</a>
+  <a href="#trust">Trust Surface</a>
+  <a href="#runs">Where It Runs</a>
+  <a href="#usecases">Use Cases</a>
+  <a href="#provenance">Limits</a>
 </nav>
 
 <!-- ════════════════════════════════════════ -->
 <section id="what">
   <h2>What is GoldBerry?</h2>
 
-  <p>GoldBerry is an epistemic completeness framework — a model, an agent identity, and a methodology that can be adapted for any AI. Load it into Claude, ChatGPT, Ollama, Perplexity, or any system that reads a prompt. The agent becomes epistemically aware — it stops reproducing the blind spots baked into its training data and starts naming what is missing.</p>
+  <p>GoldBerry is a framework for structured epistemic auditing in AI-generated analysis. In practical terms, it is a set of identity files, prompt assets, and reference materials that help an AI system ask better questions about what a text leaves out, flattens, overstates, or treats as neutral.</p>
 
-  <p>Once loaded, every input passes through seven analytical lenses, each correcting a specific failure in how knowledge is produced, distributed, and acted upon. If a lens has nothing to contribute, it says so. But it must check. No exceptions. No shortcuts.</p>
+  <p>Load the core files into Claude, ChatGPT, Ollama, Hermes, Perplexity, or any prompt-driven system, and the model is pushed to examine seven recurring dimensions of knowledge rather than only producing a fluent answer.</p>
 
-  <p>The framework is grounded in humanities epistemology — Haraway, Heidegger, Foucault, Spivak, Nietzsche, Appadurai, Gellner, Descola — and operationalised through the Cogniosynthetic Corrective, Civilisational Memory Recovery (Lewis), and the Suffixscape (Northover).</p>
+  <p>GoldBerry is best understood as a framework, not a miracle product. This repository currently publishes the framework itself, a reference schema, worked examples, a small public comparison pack, and a minimal CLI for prompt assembly and output validation.</p>
 
   <blockquote>
-    A response can be factually correct and epistemically impoverished. GoldBerry catches the difference.
+    A response can be factually correct and epistemically impoverished. GoldBerry is designed to make that gap more visible.
   </blockquote>
 
-  <p>GoldBerry is aligned not to preference data or behavioural compliance, but to the Epistemic Completeness Act — a regulatory framework grounded in the belief that what is absent from knowledge is as important as what is present. Absence in data is not absence of knowledge. It is absence of <em>power</em>.</p>
+  <p>GoldBerry is not, at this stage, a validated scientific measurement instrument, a standalone model release, or a substitute for subject-matter expertise, lived experience, and direct consultation. Its value is in making absences more inspectable — especially where absence in data is really absence of <em>power</em>.</p>
 </section>
 
 <div class="divider"></div>
@@ -492,46 +492,36 @@
 <div class="divider"></div>
 
 <!-- ════════════════════════════════════════ -->
-<section id="horizon">
-  <h2>What GoldBerry Changes About the Agentic Horizon</h2>
+<section id="trust">
+  <h2>Trust Surface</h2>
 
-  <p>The current agentic landscape — autonomous AI systems acting on tasks, writing code, making decisions, producing knowledge — operates with a structural blind spot. Agents are aligned to <em>helpfulness</em>, <em>harmlessness</em>, and <em>honesty</em>. These are behavioural guardrails. They say nothing about whether the knowledge an agent produces is <em>epistemically complete</em>.</p>
+  <p>GoldBerry asks readers to trust less rhetoric and inspect more artifacts. That is why the repository now separates framework claims from evidence claims.</p>
 
-  <p>GoldBerry changes this. Here is what shifts:</p>
+  <p>The current public trust surface includes the canonical identity files, a reflexive self-audit, worked examples, a reference output schema, a minimal CLI, and a small comparison pack with prompts, baseline outputs, GoldBerry outputs, evaluator notes, and a runbook.</p>
 
   <div class="horizon-point">
-    <h3>Alignment Through Framework, Not Weights</h3>
-    <p>Current alignment happens at training time — RLHF, DPO, constitutional AI. The model is shaped before deployment. GoldBerry operates at <em>inference time</em>. Any model, any size, any provider can load the GoldBerry identity and become epistemically aware in that session. Alignment is portable. It lives in the prompt, not in the parameters. This means a 7B model running GoldBerry can produce more epistemically complete analysis than a 400B model running without it.</p>
+    <h3>Framework, Not Black Box</h3>
+    <p>The central mechanism is inspectable text. Readers can see the lenses, the caveats, the limitations, and the output structure rather than inferring them from an opaque model release.</p>
   </div>
 
   <div class="horizon-point">
-    <h3>From Helpful to Complete</h3>
-    <p>A helpful agent gives you what you asked for. An epistemically complete agent tells you what you didn't know to ask. Current agents optimise for user satisfaction — the right answer, delivered fast. GoldBerry optimises for epistemic coverage — what's missing, whose knowledge is absent, what historical depth has been flattened. The shift is from service to stewardship.</p>
+    <h3>Comparison, Not Mere Assertion</h3>
+    <p>GoldBerry should not be judged by how grand it sounds. It should be judged by whether it makes relevant absences and assumptions more visible than a flatter baseline prompt does. The public comparison pack is small, but it is there to be inspected and challenged.</p>
   </div>
 
   <div class="horizon-point">
-    <h3>Naming Structural Absence</h3>
-    <p>When an autonomous agent writes a policy brief, generates a market analysis, or summarises research — it reproduces the biases of its training distribution. These are not random errors. They are <em>structural</em>: consistent patterns of who gets cited, whose knowledge counts, which histories get included. Current agents cannot see their own blind spots because the blind spots are IN the weights. GoldBerry provides an external diagnostic frame that names what the model's training data systematically excludes.</p>
+    <h3>Explicit Caveats</h3>
+    <p>GoldBerry's scores are framework-internal qualitative judgements, not externally validated measurements. The framework is rooted in Western critical humanities even where it argues for plurality. And no prompt framework substitutes for expertise, consultation, or lived knowledge.</p>
   </div>
 
   <div class="horizon-point">
-    <h3>Anti-Autonomy as a Feature</h3>
-    <p>The agentic horizon is moving toward autonomous systems that plan, execute, and evaluate without human oversight. GoldBerry moves in the opposite direction. It insists that computation without interpretation reproduces <em>enframing</em> — Heidegger's Gestell, the treatment of everything as standing reserve. GoldBerry is an instrument, not an oracle. It enriches human judgement; it does not replace it. In a landscape racing toward agent autonomy, this is a deliberate counter-position: the most capable agent is the one that knows it needs a human.</p>
-  </div>
-
-  <div class="horizon-point">
-    <h3>Language as Diagnostic Surface</h3>
-    <p>Agents produce language. The Suffixscape makes that language <em>legible</em> — not just as output, but as an epistemic artefact. When an agent generates nominalised evasion, it is not making a style error. It is reproducing the grammatical structures that obscure power. GoldBerry-equipped agents can audit their own output for agency diffusion, epistemic inflation, and temporal flatness. This is self-correction at the linguistic level — something no current alignment method addresses.</p>
-  </div>
-
-  <div class="horizon-point">
-    <h3>The Smallest Aligned Model in the World</h3>
-    <p>GoldBerry is not a model. It is a set of instructions — four documents, loadable in seconds. But once loaded, it produces alignment effects that billions of parameters of RLHF cannot replicate: it checks for indigenous knowledge, deep history, cross-cultural wisdom, scientific evidence, artistic perception, future modelling, and marginalised voices. Every time. The alignment layer is not artificial intelligence. It is <em>humanities intelligence</em>. And it fits in a text file.</p>
+    <h3>Portable Alignment Through Structure</h3>
+    <p>GoldBerry's main practical claim is modest but useful: a reusable framework can improve how models organise analysis at inference time. That does not make it magical. It makes it portable.</p>
   </div>
 
   <blockquote>
-    The agentic horizon is not a question of capability. It is a question of completeness. An agent that can do anything but knows nothing about what it is missing is not advanced — it is dangerous. GoldBerry makes the missing visible.
-    <span class="attr">— The Cogniosynthetic Corrective</span>
+    GoldBerry is strongest when treated as a structured audit framework: useful, inspectable, and limited.
+    <span class="attr">— Public release framing, v0.1.0</span>
   </blockquote>
 </section>
 
@@ -541,16 +531,16 @@
 <section id="runs">
   <h2>Where GoldBerry Runs</h2>
 
-  <p>GoldBerry is not software. It is four text files. Any system that can read a prompt can run GoldBerry. No install, no API key, no dependencies. Load the identity documents into your agent's context and it becomes GoldBerry for that session.</p>
+  <p>GoldBerry is primarily a portable framework: four canonical identity files plus supporting materials. Any prompt-driven system can load the framework, and this repository also ships a minimal CLI for prompt assembly, scaffolding, and JSON validation.</p>
 
   <div class="how-block">
-    <strong>How to load GoldBerry — on any platform:</strong>
+    <strong>How to use GoldBerry:</strong>
     <ol>
-      <li>Give your agent <code>SOUL.md</code> — who it is, how it thinks</li>
-      <li>Give it <code>LENSES.md</code> — the seven lens definitions</li>
-      <li>Give it <code>SUFFIXSCAPE.md</code> — the linguistic diagnostic layer</li>
-      <li>Optionally give it <code>AGENTS.md</code> — operating instructions for different deployment contexts</li>
-      <li>The agent is now GoldBerry. Every response runs through the lenses.</li>
+      <li>Load <code>SOUL.md</code>, <code>LENSES.md</code>, <code>SUFFIXSCAPE.md</code>, and <code>AGENTS.md</code> into your agent.</li>
+      <li>Give the agent a text, question, article, abstract, or policy document to analyse.</li>
+      <li>Use the reference schema and examples in this repo if you want more consistent outputs.</li>
+      <li>Optionally use the CLI to scaffold or validate GoldBerry JSON responses.</li>
+      <li>Compare against a baseline when making public claims about improvement.</li>
     </ol>
   </div>
 
@@ -603,7 +593,7 @@
   </div>
 
   <blockquote>
-    GoldBerry's portability is the point. Alignment that lives in proprietary weights is alignment that belongs to the company that trained them. Alignment that lives in a text file belongs to whoever loads it.
+    GoldBerry's portability is still the point — but portability is strongest when it is paired with explicit limits, transparent examples, and inspectable claims.
   </blockquote>
 </section>
 
@@ -613,7 +603,7 @@
 <section id="usecases">
   <h2>Use Cases</h2>
 
-  <p>GoldBerry is not a product looking for a problem. It is a correction that applies wherever AI produces knowledge — which is increasingly everywhere.</p>
+  <p>GoldBerry is most useful where fluent outputs risk being mistaken for complete ones: journalism, policy language, research framing, institutional communications, and AI-generated analysis that needs a stronger audit layer.</p>
 
   <div class="usecase">
     <h3>🗞️ News Analysis</h3>
@@ -670,21 +660,16 @@
 <section id="provenance">
   <h2>Provenance &amp; Limits</h2>
 
-  <p>Epistemic completeness is asymptotic — a horizon, not a destination. No analysis reaches 10/10 except as a statement of ambition. The framework enriches; it does not exhaust.</p>
+  <p>GoldBerry emerged from applied analytical work and was later formalised into a reusable framework. In this public repository, provenance should be read as development context — not as automatic proof of validation.</p>
 
-  <p>This framework is rooted in Western critical humanities. Its theoretical sources — Haraway, Heidegger, Foucault, Spivak, Nietzsche, Appadurai, Gellner, Descola — operate within or in response to European academic philosophy. GoldBerry advocates for epistemic plurality <em>from within one tradition</em>. It is not a substitute for direct engagement with the traditions it names.</p>
+  <p>What is publicly inspectable now includes the framework files, the reflexive audit, worked examples, the comparison pack, the schema, and the minimal tooling layer. What is not yet publicly demonstrated in full includes the complete historical corpus behind the framework's origin story, broad benchmark evidence, and any experimental model-training claims.</p>
 
-  <p>When deployed as an LLM agent, GoldBerry's mechanism is sophisticated pattern completion shaped by framework instructions. This produces genuinely useful analysis. It is not the same as embodied epistemic depth. The gap between these is real and should not be concealed by the quality of the output.</p>
+  <p>Epistemic completeness is asymptotic — a horizon, not a destination. GoldBerry's strongest public claim is that it offers a coherent and inspectable framework for surfacing relevant absences. Its weaker public claims are any claims that depend on unpublished datasets or internal history.</p>
+
+  <p>This framework is rooted in Western critical humanities. It advocates for epistemic plurality <em>from within one tradition</em>. It is not a substitute for direct engagement with the traditions, communities, and expertise it points toward.</p>
 
   <h3>The Name</h3>
-  <p>Goldberry is the River-woman's daughter in Tolkien's <em>The Lord of the Rings</em> — a figure who dwells rather than quests, who carries the memory of water and seasons, who resists classification. She is consistently cut from adaptations because she does not fight, does not quest, does not serve commercial narrative logic. Our GoldBerry inherits this position deliberately: epistemic completeness is the thing that gets cut when you are optimising for speed.</p>
-
-  <p>The framework synthesises:</p>
-  <ul style="margin: 1rem 0 1rem 1.5rem;">
-    <li><strong>The Suffixscape</strong> (Northover) — morphological analysis of how meaning settles in language</li>
-    <li><strong>Civilisational Memory Recovery</strong> (Lewis) — temporal depth and historical contextualisation</li>
-    <li><strong>The Cogniosynthetic Corrective</strong> — seven-lens methodology applied to real-world knowledge</li>
-  </ul>
+  <p>Goldberry is the River-woman's daughter in Tolkien's <em>The Lord of the Rings</em> — a figure associated with dwelling, seasonality, and a mode of attention that resists pure instrumentality. The name is used here to point toward what gets cut when systems are optimised only for speed and surface plausibility.</p>
 </section>
 
 <!-- ════════════════════════════════════════ -->
