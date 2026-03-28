@@ -4,7 +4,7 @@
 
 OpenClaw is an agent framework. It runs tasks, manages skills, orchestrates sub-agents, and delivers across channels. But it has the same blind spot as every agent system: it does what you tell it, and it does it well — but it doesn't know what's missing from the picture.
 
-GoldBerry fixes that. Four text files that turn any OpenClaw agent into an epistemically aware analyst. Load it once, and every output gets checked against seven knowledge lenses that catch what training data systematically excludes.
+GoldBerry addresses that. It's an open-source framework — four text files that turn any OpenClaw agent into an epistemically aware analyst. Load it once, and the agent starts checking its own output against seven knowledge lenses that catch what training data systematically excludes.
 
 ---
 
@@ -12,11 +12,11 @@ GoldBerry fixes that. Four text files that turn any OpenClaw agent into an epist
 
 ### Method A: As a Workspace Skill (Recommended)
 
-OpenClaw uses SKILL.md files in `~/clawd/skills/`. GoldBerry slots right in.
+OpenClaw uses SKILL.md files in `~/.hermes/skills/`. GoldBerry slots right in.
 
 ```
-~/clawd/skills/goldberry/
-  SKILL.md                    ← skill definition (OpenClaw format)
+~/.hermes/skills/goldberry/
+  SKILL.md                    ← skill definition (Hermes/OpenClaw format)
   agent-identity/
     SOUL.md                   ← who GoldBerry is
     LENSES.md                 ← seven lens definitions
@@ -39,19 +39,13 @@ metadata: { "openclaw": { "emoji": "🍓" } }
 
 Once installed, OpenClaw auto-discovers it. The agent can load GoldBerry when the task matches.
 
-**Show in video**: `openclaw skills list` → GoldBerry appears with 🍓 emoji.
+**Show in video**: Skills list → GoldBerry appears with 🍓 emoji.
 
 ### Method B: As a Dedicated Agent
 
-OpenClaw supports multiple agents via `openclaw agents add`. Create a GoldBerry agent:
+OpenClaw supports multiple agents. Create a dedicated GoldBerry agent — set its identity, workspace, and system prompt to load the four GoldBerry files. This gives you a separate agent specifically for epistemic analysis — you route specific channels or tasks to it.
 
-```bash
-openclaw agents add goldberry
-```
-
-Then set its identity, workspace, and system prompt to load the four GoldBerry files. This gives you a separate agent specifically for epistemic analysis — you route specific channels or tasks to it.
-
-**Show in video**: `openclaw agents list` → main agent + goldberry agent side by side.
+**Show in video**: Agent configuration → main agent + goldberry agent side by side.
 
 ### Method C: In the System Prompt (Quick Start)
 
@@ -97,14 +91,7 @@ GoldBerry scores it. Tells you what's missing. Flags nominalised evasion in your
 
 OpenClaw has a cron system. Schedule GoldBerry to run against a news source every morning:
 
-```
-openclaw cron add --schedule "0 7 * * *" \
-  --prompt "Load GoldBerry. Analyse today's front page of [source]. 
-   Deliver the seven-lens correction." \
-  --deliver telegram
-```
-
-You wake up to a GoldBerry briefing in your Telegram. Every day. Automated epistemic completeness.
+Schedule a cron job to load GoldBerry and run it against a news source every morning, delivering the seven-lens correction to your Telegram. Every day. Automated epistemic auditing.
 
 **Show in video**: Telegram notification arriving with a GoldBerry analysis of the morning news.
 
@@ -128,26 +115,9 @@ This is agent-level QA. The producing agent optimises for the task. The auditing
 
 **Show in video**: Workflow diagram. Main agent drafts a policy brief. GoldBerry agent scores it 4/10, identifies missing Indigenous Knowledge and Deep History lenses. Main agent revises. GoldBerry re-scores at 7/10.
 
-### Role B: The Orchestrator
+### Role B: The Orchestrator (Teaser — dedicated video coming)
 
-Flip it. GoldBerry is the lead agent. It receives a task, decomposes it through the seven lenses, and dispatches sub-agents:
-
-```
-Task: "Analyse the UK government's AI safety white paper"
-
-GoldBerry decomposes:
-  → Sub-agent 1: Extract the scientific evidence claims (Lens 4)
-  → Sub-agent 2: Research the historical context (Lens 2)
-  → Sub-agent 3: Identify which communities are not represented (Lens 7)
-  → Sub-agent 4: Find cross-cultural AI governance approaches (Lens 3)
-  → Sub-agent 5: Model the second-order effects (Lens 6)
-
-GoldBerry synthesises the results into a complete seven-lens analysis.
-```
-
-Each sub-agent is a specialist. GoldBerry is the framework that ensures no lens gets dropped. This is orchestration driven by epistemic structure, not just task decomposition.
-
-**Show in video**: GoldBerry receiving a complex task, breaking it into lens-specific sub-tasks, dispatching sub-agents, collecting results, producing synthesis.
+Flip it. GoldBerry as the lead agent — receiving a complex task, decomposing it through the seven lenses, dispatching lens-specific sub-agents, and synthesising the results. Orchestration driven by epistemic structure, not just task decomposition. This pattern deserves its own video — for now, know that the architecture supports it.
 
 ### Role C: The Pre-Flight Check
 
@@ -159,7 +129,7 @@ Before any agent output leaves the system — before it's delivered to Telegram,
   If CMR < 6: flag for human review with specific lens gaps noted
 ```
 
-This is the epistemic completeness gate. Nothing goes out unchecked.
+This is the epistemic completeness gate. When wired in, nothing goes out without a lens check.
 
 ---
 
@@ -201,7 +171,7 @@ Without GoldBerry, "comprehensive" means more detail. With GoldBerry, "comprehen
 
 ## Part 5: The OpenClaw Skill File
 
-Ready to install. Copy this into `~/clawd/skills/goldberry/SKILL.md`:
+Ready to install. Copy this into `~/.hermes/skills/goldberry/SKILL.md`:
 
 ```yaml
 ---
@@ -211,7 +181,7 @@ description: "Epistemic completeness framework — seven-lens analysis for any
   claims, institutional communication, news analysis, policy review, research 
   integrity, or quality control of agent output. Loads the GoldBerry identity 
   (SOUL.md, LENSES.md, SUFFIXSCAPE.md, AGENTS.md) for epistemic correction."
-homepage: https://github.com/cogniosynthesis/goldberry
+homepage: https://github.com/PhamBit/goldberry
 metadata: { "openclaw": { "emoji": "🍓", "requires": { "bins": [] } } }
 ---
 
@@ -307,11 +277,12 @@ MIT Licensed. © Cogniosynthesis Ltd.
 | Live demo: Audit your output | 1:30 | Draft → GoldBerry audit → revision |
 | Agent teams | 2:00 | Auditor pattern, orchestrator pattern, pre-flight gate |
 | How behaviour changes | 1:30 | The six observable shifts |
-| The provenance | 1:00 | Not theory — 12,000 corrections, real work, MiniLLM training |
-| Close | 0:30 | "MIT licensed. Four text files. Install it now." |
-| **Total** | **~12:30** | |
+| The provenance | 1:00 | Not theory — 12,000 corrections, real operational work |
+| Close | 0:30 | "MIT licensed. Framework-first. https://goldberry-here.co.uk" |
+| **Total** | **~11:00** | |
 
 ---
 
-*GoldBerry × OpenClaw — epistemic completeness for the agentic horizon.*
+*GoldBerry × OpenClaw — structured epistemic auditing for the agentic horizon.*
+*Website: https://goldberry-here.co.uk | Repo: https://github.com/PhamBit/goldberry*
 *© Cogniosynthesis Ltd. MIT Licensed.*
