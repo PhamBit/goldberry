@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goldberry-here.co.uk/sitemap.xml
