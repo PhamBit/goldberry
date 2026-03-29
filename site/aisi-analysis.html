@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldBerry Analysis: UK AI Security Institute — 29 March 2026</title>
+  <meta name="description" content="Seven-lens epistemic audit of the UK AI Security Institute's public framing. How does the UK's primary AI safety body define risk, and whose perspectives are absent? CMR Score: 3.5/10.">
+  <link rel="canonical" href="https://goldberry-here.co.uk/aisi-analysis.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://goldberry-here.co.uk/aisi-analysis.html">
+  <meta property="og:title" content="GoldBerry Analysis: UK AI Security Institute — CMR 3.5/10">
+  <meta property="og:description" content="How does the UK's primary AI safety body define risk? Epistemically narrow, culturally insular, democratically hollow in its public framing.">
+  <meta property="og:image" content="https://goldberry-here.co.uk/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GoldBerry Analysis: UK AI Security Institute — CMR 3.5/10">
+  <meta name="twitter:description" content="How does the UK's primary AI safety body define risk? Epistemically narrow, culturally insular, democratically hollow in its public framing.">
+  <meta name="twitter:image" content="https://goldberry-here.co.uk/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+    :root { --gold: #c9952b; --gold-light: #f0d88a; --gold-pale: #fdf6e3; --ink: #2c2416; --ink-soft: #5c4f3a; --cream: #fefcf6; --river: #4a7c8a; --river-pale: #e8f1f3; --berry: #b84233; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; background: var(--cream); color: var(--ink); line-height: 1.7; font-size: 19px; }
+    .back-link { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--gold); text-decoration: none; letter-spacing: 0.05em; }
+    .back-link:hover { text-decoration: underline; }
+    header { text-align: center; padding: 3rem 2rem 2rem; background: linear-gradient(180deg, var(--gold-pale) 0%, var(--cream) 100%); border-bottom: 2px solid var(--gold-light); }
+    header h1 { font-size: 2.4rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+    header .meta { font-family: 'Inter', sans-serif; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--river); margin-top: 0.6rem; }
+    header .cmr { font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 600; color: var(--berry); margin-top: 1rem; }
+    .scope { max-width: 720px; margin: 0 auto; padding: 1.5rem 2rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--river); border-left: 2px solid var(--gold-light); margin-top: 2rem; padding-left: 1.5rem; }
+    article { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+    article h2 { font-size: 1.8rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; color: var(--ink); }
+    article h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.8rem; margin-bottom: 0.5rem; color: var(--ink); }
+    p { margin-bottom: 1.1rem; }
+    blockquote { border-left: 3px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0; background: var(--gold-pale); font-style: italic; color: var(--ink-soft); }
+    .lens-section { margin-bottom: 2rem; padding-left: 1.5rem; border-left: 2px solid var(--river); }
+    .lens-section h3 { color: var(--river); margin-top: 0; }
+    .lens-absent { border-left-color: var(--berry); }
+    .lens-absent h3 { color: var(--berry); }
+    .lens-partial { border-left-color: var(--gold); }
+    .lens-partial h3 { color: var(--gold); }
+    .suffix-example { background: var(--river-pale); border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+    .suffix-example .bad { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--berry); margin-bottom: 0.4rem; }
+    .suffix-example .diagnosis { font-size: 0.95rem; color: var(--ink-soft); }
+    .synthesis-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+    .synthesis-list li { padding: 0.4rem 0; padding-left: 1rem; border-left: 2px solid var(--berry); margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .solution { background: white; border: 1px solid var(--gold-light); border-radius: 6px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
+    .solution strong { color: var(--gold); }
+    .divider { width: 3rem; height: 2px; background: var(--gold); margin: 3rem auto; }
+    footer { text-align: center; padding: 3rem 2rem; border-top: 3px solid var(--gold); background: var(--gold-pale); }
+    footer p { font-size: 0.95rem; color: var(--ink-soft); }
+    footer .ip { font-family: 'Inter', sans-serif; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--gold); margin-top: 1rem; }
+    @media (max-width: 600px) { header h1 { font-size: 1.8rem; } article { padding: 2rem 1.2rem; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <p><a href="/" class="back-link">← GoldBerry</a></p>
+  <h1><img src="berry-icon.png" alt="GoldBerry" style="height:2.8rem;width:auto;vertical-align:middle;margin-right:0.3em;"> UK AI Security Institute Through Seven Lenses</h1>
+  <div class="meta">aisi.gov.uk · Sunday 29 March 2026</div>
+  <div class="cmr">CMR Score: 3.5 / 10</div>
+</header>
+
+<div class="scope">
+  <strong>Scope:</strong> This analysis audits AISI's public-facing website text only — the homepage and About page as rendered on 29 March 2026. It does not claim to assess AISI's internal research practice, unpublished stakeholder engagement, or work not visible in these public materials. The epistemic profile identified here is of the public frame, not necessarily of the institution in its entirety.
+</div>
+
+<article>
+
+  <p>The UK AI Security Institute is the first state-backed organisation dedicated to advanced AI safety research. Its public communications shape how policymakers, researchers, and citizens understand what AI risk means and who is equipped to address it.</p>
+
+  <p>We ran GoldBerry on aisi.gov.uk — the homepage and About page. The result is a structural diagnosis of the epistemic frame within which the UK's primary AI safety body presents itself to the world.</p>
+
+  <blockquote>
+    Epistemically narrow in its public framing despite substantial institutional resources and genuine research output. Safety is defined within one disciplinary frame. The public is an object, never a subject.
+    <span style="display:block;margin-top:0.6rem;font-style:normal;font-size:0.9rem;color:var(--gold);">— GoldBerry, CMR 3.5/10</span>
+  </blockquote>
+
+  <h2>Corrected Framing</h2>
+
+  <p>AISI presents itself as the authoritative source on AI risk — "rigorous", "scientific", "the first state-backed organisation". The framing is one of technical mastery applied to national security and public safety. The implicit message: deep technical expertise from the organisations that built these systems is a prerequisite for assessing their safety.</p>
+
+  <p>This is a specific epistemic claim. It says: AI risk is primarily a technical problem, solvable by technical research, conducted by people from the technical organisations that created the risk. The public's role is to be "kept safe." The government's role is to "understand" — through AISI's lens.</p>
+
+  <p>What this framing excludes is not accidental. It is structural.</p>
+
+  <h2>Power-Knowledge Audit</h2>
+
+  <p><strong>WHO PRODUCED THIS</strong>: AISI communications team, within the Department for Science, Innovation and Technology (DSIT). Institutional voice of UK government AI policy.</p>
+
+  <p><strong>FOR WHOM</strong>: Three audiences — AI researchers they want to recruit, policymakers they advise, and AI companies they collaborate with. The public is addressed only as a passive beneficiary ("keep the public safe").</p>
+
+  <p><strong>SERVING WHAT INTERESTS</strong>: AISI serves the UK government's positioning in the global AI race. The language of safety provides the democratic justification for massive state investment in AI infrastructure (£1.5bn compute, £66m/year). The talent pipeline runs from industry (OpenAI, DeepMind) through AISI back to influence over industry. The page presents proximity to major AI firms as a credential, while leaving the governance risks of that proximity largely unaddressed.</p>
+
+  <h3>Suffixscape Audit</h3>
+
+  <div class="suffix-example">
+    <div class="bad">"Rigorous AI research to enable advanced AI governance"</div>
+    <div class="diagnosis">"Enable" nominalises agency. Enable whom? To govern what? By whose authority? The word claims a causal relationship (research → governance) without specifying the mechanism, the democratic mandate, or who the governed are.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Governments have a critical role to play in ensuring advanced AI is safe, secure and beneficial"</div>
+    <div class="diagnosis">"Safe, secure and beneficial" — three adjectives doing enormous epistemic work. Safe for whom? Secure against what threats, defined by whom? Beneficial by whose measure? Each word claims completeness without specifying a framework. This is epistemic inflation.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Building the world's leading understanding of advanced AI risks and solutions"</div>
+    <div class="diagnosis">"World's leading" is epistemic inflation at its most direct. Leading by what metric? Assessed by whom? This is an unauditable claim presented as fact.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"We designed AISI like a startup in the government"</div>
+    <div class="diagnosis">"Startup" imports Silicon Valley organisational mythology into a government body. It claims agility, disruption, speed — values in tension with democratic accountability, public consultation, and deliberative governance.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Keep the public safe"</div>
+    <div class="diagnosis">Passive construction. The public is the object, not the subject. AISI keeps; the public is kept. The grammar structurally removes public agency from the safety equation.</div>
+  </div>
+
+  <h2>What's Missing — All Seven Lenses</h2>
+
+  <div class="lens-section lens-absent">
+    <h3>🌿 Lens 1 — Indigenous Knowledge: ABSENT</h3>
+    <p>AI systems are trained on data that systematically under-represents Indigenous knowledge traditions — oral histories, relational epistemologies, land-based knowledge systems. AISI's research agenda does not mention this. For Indigenous communities, the "risk" of AI is not misalignment or cyber misuse — it is the latest iteration of epistemic colonialism, where dominant knowledge systems are encoded as universal while situated knowledges are classified as missing data.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>📜 Lens 2 — Deep History: ABSENT</h3>
+    <p>AISI presents AI safety as a contemporary technical challenge with no historical depth. There is no reference to the history of technological governance — nuclear weapons regulation, pharmaceutical safety, environmental protection — or to what those histories teach about regulatory capture, the limitations of self-regulation by creators, and the decades-long timescales of institutional learning. The movement of personnel between AI companies and their regulator has historical precedents in finance, pharma, and energy. These precedents — and their lessons about regulatory capture — are not referenced.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🌍 Lens 3 — Cross-Cultural Wisdom: ABSENT</h3>
+    <p>AISI's framing is entirely Anglophone and Western. The leadership pipeline is OpenAI → DeepMind → Oxford → GCHQ. There is no reference to how China, India, Brazil, Nigeria, or the African Union think about AI risk — despite these being the populations most likely to be affected by AI systems deployed at scale. There is no mention of the EU AI Act, UNESCO's AI Ethics Recommendation, or any non-Anglophone governance framework. AI safety as defined by AISI is the view from London, San Francisco, and Oxford.</p>
+  </div>
+
+  <div class="lens-section lens-partial">
+    <h3>🔬 Lens 4 — Scientific Evidence: PARTIALLY PRESENT</h3>
+    <p>AISI does conduct and publish research. The Frontier AI Trends Report, the persuasion study in Science, and the Inspect evaluation platform represent genuine scientific output. This is the strongest lens in AISI's profile. However, the evidence base is narrow: model capabilities, benchmark performance, red-teaming results. There is no social science, no ethnography of affected communities, no epidemiological approach to AI harms.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🎨 Lens 5 — Artistic Perception: ABSENT</h3>
+    <p>The website is clean, professional, and entirely propositional. There is no sense of what AI risk feels like — for a worker displaced by automation, for a community subjected to algorithmic policing, for a patient misdiagnosed by a clinical AI. The lived experience of AI harm is not on the page. Art, narrative, testimony, affect — the forms of knowledge that carry what propositions cannot — are entirely absent.</p>
+  </div>
+
+  <div class="lens-section lens-partial">
+    <h3>🚀 Lens 6 — Future Modelling: PARTIALLY PRESENT</h3>
+    <p>AISI's research agenda includes forward-looking areas: autonomy, human influence, societal resilience. The Frontier AI Trends Report is explicitly about trajectory. This is the second strongest lens. However, the future modelling is restricted to model capabilities — what AI systems might be able to do. It does not model the second-order social effects: labour market restructuring, democratic erosion, concentration of power, or differential impact on Global South populations.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🤝 Lens 7 — Marginalised Voices: THE CENTRAL ABSENCE</h3>
+    <p>AISI's homepage and About page contain zero references to people affected by AI deployment, civil society organisations, trade unions or worker representatives, disability communities, racial justice organisations, or Global South perspectives. The "public" appears once — as the object of "keep the public safe." In the public-facing materials reviewed, the public does not speak, advise, participate, or co-design. AISI's safety, as presented on these pages, is defined for people, not with people. This is the kind of structural exclusion the seven lenses are designed to make visible.</p>
+  </div>
+
+  <h2>Synthesis</h2>
+
+  <p>The seven lenses reveal that AISI's public framing is:</p>
+
+  <ul class="synthesis-list">
+    <li><strong>EPISTEMICALLY NARROW</strong>: safety defined within one disciplinary frame (computer science + national security)</li>
+    <li><strong>CULTURALLY INSULAR</strong>: entirely Anglophone, entirely Western, entirely from the technical-policy pipeline</li>
+    <li><strong>HISTORICALLY ROOTLESS</strong>: no engagement with the history of technology regulation or regulatory capture</li>
+    <li><strong>DEMOCRATICALLY HOLLOW</strong>: the public is an object, never a subject. No civil society, no affected communities</li>
+    <li><strong>EXPERIENTIALLY ABSENT</strong>: no testimony, no narrative, no sense of what AI harm feels like</li>
+    <li><strong>FUTURE-MODELLING RESTRICTED</strong>: models what AI can do, not what AI does to people</li>
+  </ul>
+
+  <p>This is not a criticism of AISI's research quality — the technical work may be excellent. It is a diagnosis of the epistemic frame within which that research is presented publicly. The frame determines what counts as risk, who counts as expert, and who counts as affected. Everything outside the frame is invisible.</p>
+
+  <h2>Solution Pathways</h2>
+
+  <div class="solution">
+    <strong>a) ESTABLISH A PUBLIC VOICE.</strong> Create a public advisory panel — not of technologists, but of affected communities. Workers in sectors undergoing AI-driven automation. Disability advocates. Racial justice organisations. Global South researchers. Give them a structural role, not a consultation exercise.
+  </div>
+
+  <div class="solution">
+    <strong>b) EXPAND THE DISCIPLINARY FRAME.</strong> Commission social science research alongside computer science. Ethnography of AI deployment effects. Historical analysis of technology governance. The £15m+ grant fund should include non-CS research.
+  </div>
+
+  <div class="solution">
+    <strong>c) SURFACE THE CROSS-CULTURAL DIMENSION.</strong> Publish a position on how AISI's work relates to non-Western AI governance frameworks — the EU AI Act, UNESCO's AI Ethics Recommendation, African Union AI strategy. Acknowledge the Anglophone frame explicitly.
+  </div>
+
+  <div class="solution">
+    <strong>d) ADD EXPERIENTIAL KNOWLEDGE.</strong> Commission testimony from people affected by AI systems — automated welfare decisions, algorithmic hiring, predictive policing, content moderation at scale. Make the human experience of AI risk visible on the homepage.
+  </div>
+
+  <div class="solution">
+    <strong>e) HISTORICISE THE SAFETY CLAIM.</strong> Publish a short institutional analysis: "What did we learn from nuclear regulation, pharmaceutical safety, and financial regulation about the risks of industry-regulator proximity?" Address the governance question proactively with historical depth.
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>CMR Score: 3.5 / 10</h2>
+
+  <p>Epistemically narrow in its public framing despite substantial institutional resources and genuine research output. Lens 4 (Scientific Evidence) is present and credible within its disciplinary scope. Lens 6 (Future Modelling) is partially present for model capabilities. Lenses 1, 2, 3, 5, and 7 are not visible in the public materials reviewed.</p>
+
+  <p>AISI scores higher than the BBC homepage (2.5/10) because it has genuine, published research output and some forward-looking capability modelling. The additional 1.0 point reflects real substance in Lenses 4 and 6. The remaining gap reflects the absence — in the public frame — of the other five lenses.</p>
+
+  <p><strong>What GoldBerry cannot supply</strong>: the actual voices of communities affected by AI deployment, the social science research AISI has not commissioned, the cross-cultural governance frameworks AISI has not engaged with. These require institutional decisions, not framework analysis.</p>
+
+  <div class="divider"></div>
+
+  <h2>Next Step Beyond GoldBerry</h2>
+
+  <p>AISI has the resources, the mandate, and the talent to present a broader epistemic frame than what currently appears on its public pages. Whether the internal work is wider than the public framing suggests is not something this analysis can determine. What the seven lenses can identify is that the public-facing epistemic frame — the one that shapes external understanding of what AI risk means — is narrow. Widening it would require deliberate, structural choices.</p>
+
+  <p>The first choice is the simplest: who is in the room? If the room contains only computer scientists, national security professionals, and AI company alumni, the definition of "safety" will reflect their worldview. Add historians, anthropologists, disability advocates, trade unionists, Global South researchers, and affected communities — and the definition changes. Not because the technical work was wrong, but because it was incomplete.</p>
+
+  <p><em>The framework points toward the room. The room is not in the framework.</em></p>
+
+  <div class="divider"></div>
+
+  <p style="text-align:center;margin-top:2rem;">
+    <a href="/" class="back-link">← Back to GoldBerry</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="bbc-analysis.html" class="back-link">BBC Analysis (CMR 2.5)</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="https://github.com/PhamBit/goldberry" class="back-link">View the repository →</a>
+  </p>
+
+</article>
+
+<footer>
+  <p><img src="berry-icon.png" alt="GoldBerry" style="height:2.4rem;width:auto;"></p>
+  <p><em><img src="berry-icon.png" alt="GoldBerry" style="height:1.6rem;width:auto;vertical-align:middle;"> GoldBerry v0.1.0 · Cogniosynthesis Ltd · MIT Licensed</em></p>
+  <div class="ip">All intellectual property © Cogniosynthesis Ltd.</div>
+</footer>
+
+</body>
+</html>
