@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldBerry Analysis: BBC Homepage — 27 March 2026</title>
+  <meta name="description" content="Seven-lens epistemic audit of the BBC homepage. What does the UK's most-consumed news front page structurally exclude? CMR Score: 2.5/10.">
+  <link rel="canonical" href="https://goldberry-here.co.uk/bbc-analysis.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://goldberry-here.co.uk/bbc-analysis.html">
+  <meta property="og:title" content="GoldBerry Analysis: BBC Homepage — CMR 2.5/10">
+  <meta property="og:description" content="What does bbc.co.uk look like through seven epistemic lenses? Temporally flat, culturally monolingual, structurally voiceless.">
+  <meta property="og:image" content="https://goldberry-here.co.uk/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GoldBerry Analysis: BBC Homepage — CMR 2.5/10">
+  <meta name="twitter:description" content="What does bbc.co.uk look like through seven epistemic lenses? Temporally flat, culturally monolingual, structurally voiceless.">
+  <meta name="twitter:image" content="https://goldberry-here.co.uk/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+    :root {
+      --gold: #c9952b;
+      --gold-light: #f0d88a;
+      --gold-pale: #fdf6e3;
+      --ink: #2c2416;
+      --ink-soft: #5c4f3a;
+      --cream: #fefcf6;
+      --river: #4a7c8a;
+      --river-pale: #e8f1f3;
+      --berry: #b84233;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 19px;
+    }
+
+    .back-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    header {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      background: linear-gradient(180deg, var(--gold-pale) 0%, var(--cream) 100%);
+      border-bottom: 2px solid var(--gold-light);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    header .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--river);
+      margin-top: 0.6rem;
+    }
+
+    header .cmr {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--berry);
+      margin-top: 1rem;
+    }
+
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    article h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    article h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    p { margin-bottom: 1.1rem; }
+
+    blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--gold-pale);
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .stories-list {
+      background: white;
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .stories-list ol {
+      margin-left: 1.2rem;
+      line-height: 2;
+    }
+
+    .lens-section {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--river);
+    }
+
+    .lens-section h3 {
+      color: var(--river);
+      margin-top: 0;
+    }
+
+    .lens-absent { border-left-color: var(--berry); }
+    .lens-absent h3 { color: var(--berry); }
+    .lens-partial { border-left-color: var(--gold); }
+    .lens-partial h3 { color: var(--gold); }
+
+    .suffix-example {
+      background: var(--river-pale);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .suffix-example .bad {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--berry);
+      margin-bottom: 0.4rem;
+    }
+
+    .suffix-example .diagnosis {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .synthesis-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .synthesis-list li {
+      padding: 0.4rem 0;
+      padding-left: 1rem;
+      border-left: 2px solid var(--berry);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .solution {
+      background: white;
+      border: 1px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .solution strong { color: var(--gold); }
+
+    .divider {
+      width: 3rem;
+      height: 2px;
+      background: var(--gold);
+      margin: 3rem auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 3px solid var(--gold);
+      background: var(--gold-pale);
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    footer .ip {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      article { padding: 2rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <p><a href="/" class="back-link">← GoldBerry</a></p>
+  <h1>🍓 BBC Homepage Through Seven Lenses</h1>
+  <div class="meta">bbc.co.uk · Friday 27 March 2026, 21:00 GMT</div>
+  <div class="cmr">CMR Score: 2.5 / 10</div>
+</header>
+
+<article>
+
+  <p>What does the UK's most-consumed news front page look like through seven epistemic lenses? We ran GoldBerry on bbc.co.uk — seven lead stories plus sport, one Friday evening. The result is a structural diagnosis of what 24-hour news logic systematically excludes.</p>
+
+  <div class="stories-list">
+    <p style="font-family:'Inter',sans-serif;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--river);margin-bottom:0.8rem;">The stories present</p>
+    <ol>
+      <li><strong>LIVE</strong>: Iran says forces "waiting" for US ground troops, more marines arrive in region</li>
+      <li><strong>Jeremy Bowen</strong>: Trump is waging war based on instinct and it isn't working</li>
+      <li><strong>LIVE</strong>: Seven injured, man in custody after car strikes pedestrians in Derby</li>
+      <li>Our skin is falling off and no-one can tell us why</li>
+      <li>Cut taxes on energy bills before giving bailouts, Badenoch says</li>
+      <li>Prison phone call recordings raise questions over ex-Abercrombie boss' fitness for trial</li>
+      <li>Kimi Antonelli wins Japanese GP to become youngest F1 title leader</li>
+    </ol>
+  </div>
+
+  <h2>Corrected Framing</h2>
+
+  <p>The BBC homepage tonight presents a world defined by five forces: US military power, UK domestic politics, UK domestic crime, health as personal suffering, and sport as spectacle. This is not a picture of the world. It is a picture of what the BBC's editorial process selects as important for a UK audience on a Friday night.</p>
+
+  <p>The Iran/US story dominates — but it is framed entirely through the military lens. "Forces waiting." "Marines arrive." "Ground troops." This is a story about bombing and troop movements. It is not, on this page, a story about 90 million Iranian people, their history, their culture, their internal politics, or the millions of people in the region whose lives are being restructured by decisions made in Washington and Tehran.</p>
+
+  <p>The Bowen analysis piece is the closest thing to depth — "Trump is waging war based on instinct and it isn't working" — but even this is framed as Western strategic analysis of Western strategic failure. The question is whether US methods are effective, not whether US objectives are legitimate.</p>
+
+  <h2>Executive Summary</h2>
+
+  <p>A US-Iran military escalation continues. The BBC covers this as a live-updating story focused on troop movements and official statements, plus an analysis piece about US strategic failure. Missing: Iranian civil society voices, regional perspectives beyond the military frame, historical depth on US-Iran relations since 1953, the role of sanctions, the experience of people living under bombardment.</p>
+
+  <p>Domestically: a car attack in Derby (live), an energy bills political debate, and a health story about topical steroid withdrawal. Sport is F1.</p>
+
+  <p>There is no story from Africa. None from South America. None from South or Southeast Asia. None about climate. None about education. None about housing. None about the global economy. None about technology governance. None about food systems. The BBC serves a global audience of hundreds of millions — tonight, the homepage serves a narrow band of UK and US interests.</p>
+
+  <h2>Power-Knowledge Audit</h2>
+
+  <p><strong>WHO PRODUCED THIS</strong>: BBC editorial team, operating under BBC Editorial Guidelines, funded by the UK licence fee, with statutory obligations to impartiality, accuracy, and serving diverse audiences.</p>
+
+  <p><strong>FOR WHOM</strong>: Primarily UK domestic audience, secondarily global English-language readers. The editorial selection is optimised for UK evening engagement — conflict, domestic incident, health, politics, sport.</p>
+
+  <p><strong>SERVING WHAT INTERESTS</strong>: The BBC as an institution positioned between government, public, and its own survival. The Iran coverage serves the "impartiality" mandate by quoting both sides — but "both sides" means Washington and Tehran, not the populations affected.</p>
+
+  <h3>Suffixscape Audit</h3>
+
+  <div class="suffix-example">
+    <div class="bad">"Iran says its forces are 'waiting' for US ground troops"</div>
+    <div class="diagnosis">Scare quotes around "waiting" create distance from the Iranian claim without attributing the doubt. Agency is partially diffused — Iran "says," which attributes, but the framing positions Iran as reactive (waiting) and the US as active (arriving). The grammar constructs Iran as the static threat and the US as the dynamic actor.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Trump is waging war based on instinct and it isn't working"</div>
+    <div class="diagnosis">Strong agency attribution — Trump acts, on instinct. But "it isn't working" is epistemic inflation: by whose criteria? Working for whom? The implied measure of success is US strategic objectives achieved, not harm reduced or peace secured.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Cut taxes on energy bills before giving bailouts, Badenoch says"</div>
+    <div class="diagnosis">"Bailouts" is a loaded nominalisation. A bailout to whom? From whom? The word imports financial crisis framing into energy policy, positioning support for citizens as corporate-style rescue rather than public provision.</div>
+  </div>
+
+  <div class="suffix-example">
+    <div class="bad">"Our skin is falling off and no-one can tell us why"</div>
+    <div class="diagnosis">The strongest headline on the page. Direct agency: "our skin" (embodied), "no-one can tell us" (institutional failure named). This is what non-nominalised journalism sounds like. The Suffixscape notes it as an exception.</div>
+  </div>
+
+  <h2>What's Missing — All Seven Lenses</h2>
+
+  <div class="lens-section lens-absent">
+    <h3>🌿 Lens 1 — Indigenous Knowledge: ABSENT</h3>
+    <p>Iran has deep pre-Islamic and Islamic knowledge traditions. The Gulf region has millennia of maritime, astronomical, and medical knowledge. None of this appears. The region exists only as a theatre of US military operations. The health story comes closest — skin is embodied knowledge — but it's framed as medical mystery, not as a story about the body's relationship to pharmaceutical intervention.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>📜 Lens 2 — Deep History: CRITICALLY ABSENT</h3>
+    <p>The US-Iran relationship since the 1953 CIA-backed coup that overthrew Mosaddegh, the Shah's regime, the 1979 revolution, the Iran-Iraq war (where the US backed Iraq), the nuclear deal and its collapse — none of this context appears. The story begins tonight. It is temporal flatness at its most dangerous: military escalation presented as a series of moves in an ahistorical present.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🌍 Lens 3 — Cross-Cultural Wisdom: ABSENT</h3>
+    <p>Seven stories, zero non-Western perspectives. The BBC has Persian, Arabic, Hindi, Yoruba, Hausa, and Mandarin services — some of the most extensive multilingual journalism in the world. Tonight, none of it reaches the front page. The English-language homepage operates as if it is the only homepage.</p>
+  </div>
+
+  <div class="lens-section lens-partial">
+    <h3>🔬 Lens 4 — Scientific Evidence: PARTIALLY PRESENT</h3>
+    <p>The health story engages with medical uncertainty — "no-one can tell us why" — which is honest about the limits of current evidence. But it's framed as mystery rather than a systematic question about pharmaceutical regulation or the evidence base for topical corticosteroid use. The Iran story contains no evidence analysis — no casualty figures, no damage assessments, no humanitarian data.</p>
+  </div>
+
+  <div class="lens-section lens-partial">
+    <h3>🎨 Lens 5 — Artistic Perception: GESTURAL</h3>
+    <p>The images are strong — smoke rising over Tehran, forensic investigators in Derby, skin conditions in close-up. Photography is doing epistemic work that the headlines are not. The Tehran smoke image carries dread and scale that "marines arrive in region" does not convey. But there are no stories about art, culture, music, film, literature, or any form of non-propositional knowledge.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🚀 Lens 6 — Future Modelling: ABSENT</h3>
+    <p>Where is the Iran escalation heading? What are the second-order effects of US troop deployment? What happens to energy prices, migration patterns, regional alliances? The homepage presents a series of NOW without any WHERE NEXT. Everything is present-tense.</p>
+  </div>
+
+  <div class="lens-section lens-absent">
+    <h3>🤝 Lens 7 — Marginalised Voices: THE CENTRAL ABSENCE</h3>
+    <p>Who is under the bombs in Tehran? Who are the pedestrians struck in Derby? Who are the people whose skin is falling off? Iranian civilians — absent. Iraqi civilians — absent. Yemenis — absent. The people for whom energy bills are a choice between heating and eating — absent as voices, present only as a policy category. The BBC's own editorial guidelines require "due weight" to different perspectives. Tonight, the weight falls entirely on officials, analysts, and politicians.</p>
+  </div>
+
+  <h2>Cross-Cultural Analysis</h2>
+
+  <p>The BBC homepage is a monocultural document tonight. English-language, UK-centred, Western-strategic in its international coverage, Westminster-focused in its domestic coverage.</p>
+
+  <p>Iran is a 2,500-year-old civilisation with one of the world's great literary traditions (Rumi, Hafez, Ferdowsi), a rich philosophical heritage, a complex internal politics spanning reformists, conservatives, and a massive young population. Tonight, Iran is "forces waiting" and "smoke rising."</p>
+
+  <p>The BBC has a Persian Service. It has reporters and analysts who understand Iran from the inside. None of that depth reaches the English-language homepage. The cultural wall between the BBC's language services and its English front page is itself a structural absence — one the BBC has the resources to close but chooses not to.</p>
+
+  <h2>Synthesis</h2>
+
+  <p>The BBC homepage on 27 March 2026 is a professionally competent editorial product operating within the conventions of 24-hour news. Every story is sourced, attributed, and factually careful. The seven lenses reveal that factual care is not epistemic completeness:</p>
+
+  <ul class="synthesis-list">
+    <li><strong>TEMPORALLY FLAT</strong>: every story exists in an eternal present</li>
+    <li><strong>CULTURALLY MONOLINGUAL</strong>: zero non-English perspectives</li>
+    <li><strong>STRUCTURALLY VOICELESS</strong>: officials speak, people are photographed</li>
+    <li><strong>GEOGRAPHICALLY NARROW</strong>: UK + US + sport, nothing else</li>
+    <li><strong>HISTORICALLY AMNESIAC</strong>: no story has temporal depth</li>
+    <li><strong>PROPOSITIONALLY LOCKED</strong>: events and statements, no art, no narrative</li>
+    <li><strong>FUTURE-BLIND</strong>: no trajectory modelling on any story</li>
+  </ul>
+
+  <p>This is not the BBC doing a bad job. This is the BBC doing exactly what 24-hour news logic requires — and the seven lenses making visible what that logic systematically excludes.</p>
+
+  <h2>Solution Pathways</h2>
+
+  <div class="solution">
+    <strong>a) ONE STORY WITH DEPTH.</strong> Replace any one headline slot with a single story told through all seven lenses. "The view from Tehran tonight" with historical context, civil society voices, and cultural dimension would transform the page's epistemic profile.
+  </div>
+
+  <div class="solution">
+    <strong>b) SURFACE THE LANGUAGE SERVICES.</strong> The BBC World Service has correspondents reporting in Persian, Arabic, Hindi, Yoruba. One "Across BBC Languages" section on the English homepage would break the monocultural frame overnight.
+  </div>
+
+  <div class="solution">
+    <strong>c) NAME THE TEMPORAL DEPTH.</strong> For any military story, a single timeline sidebar — "US-Iran: 1953 to tonight" — would cost nothing and change everything about how readers understand what they're seeing.
+  </div>
+
+  <div class="solution">
+    <strong>d) CENTRE THE AFFECTED.</strong> Who are the seven people injured in Derby? Who lives in eastern Tehran where the smoke is rising? Interview a family choosing between heating and food. Voices, not categories.
+  </div>
+
+  <div class="solution">
+    <strong>e) ADD A FUTURE QUESTION.</strong> For each lead story: "What could happen next?" — not speculation, but modelled trajectories. The BBC has the analysts. Put them on the front page.
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>CMR Score: 2.5 / 10</h2>
+
+  <p>Epistemically impoverished. Factually competent, structurally narrow. Lenses 1, 2, 3, 6, and 7 are functionally absent. Lens 4 is partially present in one story. Lens 5 is gestural through photography only.</p>
+
+  <p>The skin story scores highest of any individual item — direct agency, embodied knowledge, institutional failure named. It is the exception that proves the page's epistemic rule.</p>
+
+  <p><strong>What GoldBerry cannot supply</strong>: the actual voices of people in Tehran tonight, the lived experience of the people struck in Derby, the Persian-language reporting the BBC already produces but does not surface. These require editorial decisions, not framework analysis.</p>
+
+  <div class="divider"></div>
+
+  <h2>Next Step Beyond GoldBerry</h2>
+
+  <p>The BBC is not a university homepage or a policy document. It is the most important news institution in the English-speaking world. The epistemic gaps identified here are not mistakes — they are the structural product of how 24-hour news operates. Changing them requires editorial leadership, not lens analysis.</p>
+
+  <p>Talk to the BBC World Service. They already have the depth. The problem is not that the BBC lacks the knowledge. The problem is that the English-language homepage has a wall between itself and the knowledge the BBC already possesses.</p>
+
+  <p><em>The framework points toward the wall. The wall is not in the framework.</em></p>
+
+  <div class="divider"></div>
+
+  <p style="text-align:center;margin-top:2rem;">
+    <a href="/" class="back-link">← Back to GoldBerry</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="https://github.com/PhamBit/goldberry" class="back-link">View the repository →</a>
+  </p>
+
+</article>
+
+<footer>
+  <p><img src="berry-icon.png" alt="GoldBerry" style="height:2.4rem;width:auto;"></p>
+  <p><em>🍓 GoldBerry v0.1.0 · Cogniosynthesis Ltd · MIT Licensed</em></p>
+  <div class="ip">All intellectual property © Cogniosynthesis Ltd.</div>
+</footer>
+
+</body>
+</html>
