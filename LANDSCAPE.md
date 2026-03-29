@@ -15,7 +15,7 @@ This document maps every adjacent project we could find and explains why none of
 
 ## The GoldBerry Feature Set (for comparison)
 
-Any comparable project would need to provide ALL of:
+GoldBerry's current public distinctiveness appears to come from this combination of features:
 
 1. **Agent-loadable** — works by loading text into any LLM, no install, no API key
 2. **Epistemic auditing** — checks what's structurally ABSENT, not just what's present
@@ -25,7 +25,7 @@ Any comparable project would need to provide ALL of:
 6. **Self-aware limits** — explicitly names its own edges and what it cannot see
 7. **Open source** — MIT licensed, fully public
 
-No project found in this survey provides all seven. Most provide one or two.
+No project found in this survey provides all seven. Most provide one or two. This combination — not any single feature — is the basis of the distinctiveness claim.
 
 ---
 
@@ -139,7 +139,7 @@ No project found in this survey provides all seven. Most provide one or two.
 
 ## Category 6: Linguistic Analysis
 
-### No comparable tool found for the Suffixscape.
+### No directly comparable integrated tool found for the Suffixscape in this survey.
 
 The Suffixscape detects:
 - Nominalised evasion (process → entity, agency abstracted)
@@ -153,11 +153,13 @@ NLP tools exist for:
 - Passive voice detection (one narrow piece of what the Suffixscape does)
 - Readability scoring (different purpose)
 
-No tool combines these four specific diagnostics as an integrated epistemic instrument. The Suffixscape is, to our knowledge, unique.
+No tool found in this survey combines these four specific diagnostics as an integrated epistemic instrument.
 
 ---
 
 ## Summary Matrix
+
+*This matrix is a compression aid, not a substitute for the per-project notes above. Partial overlaps matter more than a simple tick/cross reading suggests.*
 
 | Project | Agent-loadable | Epistemic auditing | Named lenses | Linguistic diagnostics | Eval pack | Self-aware limits | Open source |
 |---------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -189,11 +191,11 @@ No tool combines these four specific diagnostics as an integrated epistemic inst
 
 ## Conclusion
 
-The gap is real. No open-source project combines agent-loadable identity files, named epistemic lenses, a linguistic diagnostic layer, and inspectable evaluation artifacts. The closest projects operate in adjacent spaces — safety, bias, uncertainty, fact-checking — none of which address epistemic completeness as GoldBerry defines it.
+The survey suggests a real gap in the open-source landscape as currently inspected. No project found combines agent-loadable identity files, named epistemic lenses, a linguistic diagnostic layer, and inspectable evaluation artifacts. The closest projects operate in adjacent spaces — safety, bias, uncertainty, fact-checking — none of which address epistemic completeness as GoldBerry defines it.
 
-The Suffixscape has no equivalent anywhere in the landscape.
+We found no directly comparable integrated equivalent to the Suffixscape in this survey.
 
-The position is defensible. The moat is the combination, not any single feature.
+The current public position appears defensible, subject to continued challenge and updates. The distinctiveness is the combination, not any single feature.
 
 ---
 
