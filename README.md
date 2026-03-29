@@ -54,45 +54,87 @@ Everything else in the repository exists to make the framework easier to:
 
 ## Quick start
 
-### Option A — Use the framework manually
+GoldBerry works on any AI that reads a prompt. No install. No API key. No dependencies. Pick your platform:
 
-Load these files into your agent, in order:
+### ChatGPT
 
-1. `agent-identity/SOUL.md`
-2. `agent-identity/LENSES.md`
-3. `agent-identity/SUFFIXSCAPE.md`
-4. `agent-identity/AGENTS.md`
+1. Open a new chat at [chat.openai.com](https://chat.openai.com)
+2. Paste the contents of these four files into the chat, in order:
+   - [`agent-identity/SOUL.md`](agent-identity/SOUL.md)
+   - [`agent-identity/LENSES.md`](agent-identity/LENSES.md)
+   - [`agent-identity/SUFFIXSCAPE.md`](agent-identity/SUFFIXSCAPE.md)
+   - [`agent-identity/AGENTS.md`](agent-identity/AGENTS.md)
+3. Say: **"You are now GoldBerry for this session."**
+4. Paste any text — a news article, policy document, corporate About page, AI-generated report
+5. Say: **"Run a seven-lens analysis on this."**
 
-Then give the agent a text, question, article, policy document, or webpage to analyse.
+That's it. The agent is now GoldBerry. It will return a full epistemic audit with CMR score.
+
+> **Tip:** For ChatGPT Plus, you can create a custom GPT with the four files as instructions. Then GoldBerry is always one click away.
+
+### Claude
+
+1. Open [claude.ai](https://claude.ai) and start a new conversation
+2. Click the attachment icon and upload all four files from `agent-identity/`
+3. Say: **"Load these as your identity. You are GoldBerry."**
+4. Paste your text and ask for the seven-lens analysis
+
+> **Tip:** In Claude Projects, add the four files as project knowledge. Every conversation in that project runs through the lenses automatically.
+
+### Ollama (local, private, free)
+
+1. Copy the contents of all four identity files into a single Modelfile:
+   ```
+   FROM llama3.2
+   SYSTEM """
+   [paste SOUL.md, LENSES.md, SUFFIXSCAPE.md, AGENTS.md here]
+   """
+   ```
+2. Create the model: `ollama create goldberry -f Modelfile`
+3. Run it: `ollama run goldberry`
+4. Paste any text. The model IS GoldBerry.
+
+See [`examples/ollama-modelfile`](examples/ollama-modelfile) for a ready-to-use Modelfile.
+
+### Perplexity
+
+1. Go to [perplexity.ai](https://perplexity.ai) → Collections
+2. Create a new Collection, paste the four identity files into the instructions
+3. Every search in that Collection runs through GoldBerry's seven lenses — with live web sources
+
+### Any other LLM
+
+GoldBerry is just text. If your system has a system prompt, paste the four files there. If it reads uploaded files, upload them. If it has a chat window, paste them into the first message. It works everywhere because there is nothing to install.
+
+See the [`examples/`](examples/) directory for platform-specific configurations:
+- [`chatgpt-instructions.txt`](examples/chatgpt-instructions.txt) — Custom GPT instructions
+- [`claude-code-agents.md`](examples/claude-code-agents.md) — Claude Code / agent context
+- [`generic-system-prompt.txt`](examples/generic-system-prompt.txt) — Any system prompt
+- [`hermes-skill.md`](examples/hermes-skill.md) — Hermes/OpenClaw skill
+- [`ollama-modelfile`](examples/ollama-modelfile) — Ollama local model
+- [`perplexity-setup.md`](examples/perplexity-setup.md) — Perplexity collection
+
+### What to expect
+
+Once loaded, give GoldBerry any text that carries knowledge claims. It returns:
+
+1. **Corrected Framing** — what the original missed
+2. **Executive Summary** — the epistemically complete picture
+3. **Power-Knowledge Audit** — who produced this, for whom, serving what
+4. **Suffixscape Audit** — nominalised evasion, agency diffusion, epistemic inflation
+5. **What's Missing** — structural absences across all seven lenses
+6. **Synthesis** — integrated view
+7. **Solution Pathways** — actionable next steps
+8. **CMR Score** — epistemic completeness rating (1–10)
 
 ### Option B — Use the reference CLI
 
-The Python package included here does not bundle a model. It helps you:
-- assemble a GoldBerry prompt packet
-- scaffold the expected response structure
-- validate GoldBerry JSON outputs against the reference schema
-
-Install locally:
+The Python package included here does not bundle a model. It helps you assemble prompts, scaffold responses, and validate outputs:
 
 ```bash
 python3 -m pip install -e .
-```
-
-Build a prompt packet:
-
-```bash
 goldberry prompt --input "Analyse this policy memo"
-```
-
-Scaffold a response template:
-
-```bash
 goldberry scaffold --input "Analyse this policy memo" --format json
-```
-
-Validate a JSON output:
-
-```bash
 goldberry validate output.json
 ```
 
