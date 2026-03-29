@@ -102,6 +102,61 @@ See [`examples/ollama-modelfile`](examples/ollama-modelfile) for a ready-to-use 
 2. Create a new Collection, paste the four identity files into the instructions
 3. Every search in that Collection runs through GoldBerry's seven lenses — with live web sources
 
+### OpenClaw
+
+OpenClaw loads GoldBerry through its workspace AGENTS.md:
+
+1. Clone or copy the `agent-identity/` folder into your OpenClaw workspace
+2. Add this to your workspace `AGENTS.md`:
+   ```
+   ## GoldBerry Mode
+   When asked to run GoldBerry or perform epistemic analysis:
+   1. Read agent-identity/SOUL.md
+   2. Read agent-identity/LENSES.md
+   3. Read agent-identity/SUFFIXSCAPE.md
+   4. Read agent-identity/AGENTS.md
+   5. Confirm: "GoldBerry identity active."
+   6. Run all seven lenses on the input.
+   ```
+3. Say **"Run GoldBerry on this"** and paste your text
+
+OpenClaw's multi-agent system (antfarm) can also use GoldBerry as an auditor agent — reviewing other agents' outputs before delivery. See the [`examples/`](examples/) directory for the full skill file.
+
+### Hermes
+
+Hermes discovers GoldBerry as a skill automatically:
+
+1. Create the skill directory:
+   ```bash
+   mkdir -p ~/.hermes/skills/goldberry/agent-identity
+   ```
+2. Copy the four identity files into `agent-identity/`
+3. Copy [`examples/hermes-skill.md`](examples/hermes-skill.md) to `~/.hermes/skills/goldberry/SKILL.md`
+
+Hermes will auto-discover it. When a task matches (news analysis, policy audit, epistemic review), the agent loads GoldBerry. You can also trigger it manually: **"Load the goldberry skill and analyse this."**
+
+### Agent0
+
+Agent0 uses system prompts for agent identity:
+
+1. Open your Agent0 configuration
+2. Paste the contents of [`examples/generic-system-prompt.txt`](examples/generic-system-prompt.txt) into the system prompt field
+3. For the full framework, paste all four identity files into the system prompt (Agent0 supports long contexts)
+4. Every conversation in that agent runs through the seven lenses
+
+For Agent0's tool-use mode, GoldBerry works as a post-processing step: let the agent complete its task, then say **"Now run a GoldBerry audit on what you just produced."**
+
+### NanoClaw
+
+NanoClaw is lightweight — load GoldBerry directly into the system prompt:
+
+1. Open your NanoClaw agent config
+2. Paste the condensed identity from [`examples/generic-system-prompt.txt`](examples/generic-system-prompt.txt) into the system prompt
+3. For full depth, paste all four identity files (NanoClaw handles the context)
+4. Say **"Analyse this through seven lenses"** and paste your text
+
+NanoClaw's simplicity is an advantage here — no skill system to configure, no workspace to set up. Just paste and go.
+
 ### Any other LLM
 
 GoldBerry is just text. If your system has a system prompt, paste the four files there. If it reads uploaded files, upload them. If it has a chat window, paste them into the first message. It works everywhere because there is nothing to install.
