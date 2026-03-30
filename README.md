@@ -54,7 +54,25 @@ Everything else in the repository exists to make the framework easier to:
 
 ## Quick start
 
-GoldBerry works on any AI that reads a prompt. No install. No API key. No dependencies. Pick your platform:
+### The fastest way (any agentic AI)
+
+Paste this link into any AI agent with web access — Claude, ChatGPT, Kimi, Perplexity, or any agentic CLI:
+
+```
+https://github.com/PhamBit/goldberry
+```
+
+Then say: **"Load GoldBerry."**
+
+The agent reads the repo, finds the identity files, and becomes GoldBerry. Tested and confirmed on Claude, ChatGPT, Kimi, and Claude Code. No setup. No files to download. Two words.
+
+Then paste any text and say: **"Run a seven-lens analysis."**
+
+---
+
+### Platform-specific setup
+
+If your AI doesn't browse the web, or you want a persistent setup, pick your platform:
 
 ### ChatGPT
 
