@@ -466,25 +466,70 @@
 </header>
 
 <nav>
-  <a href="#live">Live Analyses</a>
   <a href="#what">What It Is</a>
+  <a href="#operational">Where It Runs</a>
+  <a href="#live">Live Analyses</a>
   <a href="#lenses">Seven Lenses</a>
   <a href="#suffixscape">Suffixscape</a>
-  <a href="#runs">Where It Runs</a>
+  <a href="#platforms">Platforms</a>
   <a href="#usecases">Use Cases</a>
   <a href="#trust">Trust Surface</a>
   <a href="#provenance">Limits</a>
 </nav>
 
 <!-- ════════════════════════════════════════ -->
+<section id="what">
+  <h2>What is GoldBerry?</h2>
+
+  <p>GoldBerry is a framework for structured epistemic auditing in AI-generated analysis. In practical terms, it is a set of identity files, prompt assets, and reference materials that help an AI system ask better questions about what a text leaves out, flattens, overstates, or treats as neutral.</p>
+
+  <p>Load the core files into Claude, ChatGPT, Ollama, Hermes, Perplexity, or any prompt-driven system, and the model is pushed to examine seven recurring dimensions of knowledge rather than only producing a fluent answer.</p>
+
+  <p>GoldBerry is best understood as a framework, not a miracle product. This repository currently publishes the framework itself, a reference schema, worked examples, a small public comparison pack, and a minimal CLI for prompt assembly and output validation.</p>
+
+  <blockquote>
+    A response can be factually correct and epistemically impoverished. GoldBerry is designed to make that gap more visible.
+  </blockquote>
+
+  <p>GoldBerry is not, at this stage, a validated scientific measurement instrument, a standalone model release, or a substitute for subject-matter expertise, lived experience, and direct consultation. Its value is in making absences more inspectable — especially where absence in data is really absence of <em>power</em>.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
+<section id="operational">
+  <h2>Where GoldBerry Already Runs</h2>
+  <p>GoldBerry was not designed in the abstract. It was extracted from live operational work across multiple public-facing domains:</p>
+
+  <div class="horizon-point">
+    <h3>CognioNews</h3>
+    <p>12,000+ seven-lens corrections on live news from 40+ sources. Daily epistemic auditing of how news is framed, what it excludes, and whose voices are absent.</p>
+  </div>
+  <div class="horizon-point">
+    <h3>CognioPublic</h3>
+    <p>Systematic epistemic audit of UK public institutions. How councils and public bodies produce and communicate knowledge.</p>
+  </div>
+  <div class="horizon-point">
+    <h3>CognioCymru</h3>
+    <p>Welsh cultural intelligence research. Legislative and historical frameworks for bilingual epistemic governance.</p>
+  </div>
+  <div class="horizon-point">
+    <h3>CognioEnacted</h3>
+    <p>Mapping epistemic completeness to UK legislation through the seven lenses. Scoring how well law addresses knowledge equity.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ -->
 <section id="live">
-  <h2>GoldBerry in the Field</h2>
-  <p>GoldBerry is proven first by operation, then by explanation. The framework was extracted from live analytical work across news, institutions, governance, and legislation. Here is what it finds.</p>
+  <h2>Live Analyses</h2>
+  <p>Proven first by operation, then by explanation. Here is what GoldBerry finds when pointed at real public texts.</p>
 
   <h3>BBC Homepage — CMR 2.5/10</h3>
   <p style="font-family:'Inter',sans-serif;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--river);">29 March 2026</p>
 
-  <p>What does the UK's most-consumed news front page look like through seven lenses? Temporally flat, culturally monolingual, structurally voiceless, geographically narrow, historically amnesiac.</p>
+  <p>The UK's most-consumed news front page through seven lenses. Temporally flat, culturally monolingual, structurally voiceless, geographically narrow, historically amnesiac.</p>
 
   <blockquote>
     A professionally competent editorial product. Factually careful. And epistemically impoverished.
@@ -516,46 +561,6 @@
   </div>
 
   <p><a href="aisi-analysis.html" style="color:var(--gold);font-family:'Inter',sans-serif;font-weight:600;">Read the full AISI analysis →</a></p>
-
-  <div class="divider" style="width:6rem;margin:2.5rem auto;"></div>
-
-  <h3>Operational Foundations</h3>
-  <p>These public analyses build on a framework extracted from live work across multiple domains:</p>
-  <div class="horizon-point">
-    <h3>CognioNews</h3>
-    <p>12,000+ seven-lens corrections on live news from 40+ sources. Daily epistemic auditing of how news is framed, what it excludes, and whose voices are absent.</p>
-  </div>
-  <div class="horizon-point">
-    <h3>CognioPublic</h3>
-    <p>Systematic epistemic audit of UK public institutions. How councils and public bodies produce and communicate knowledge.</p>
-  </div>
-  <div class="horizon-point">
-    <h3>CognioCymru</h3>
-    <p>Welsh cultural intelligence research. Legislative and historical frameworks for bilingual epistemic governance.</p>
-  </div>
-  <div class="horizon-point">
-    <h3>CognioEnacted</h3>
-    <p>Mapping epistemic completeness to UK legislation through the seven lenses. Scoring how well law addresses knowledge equity.</p>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ════════════════════════════════════════ -->
-<section id="what">
-  <h2>What is GoldBerry?</h2>
-
-  <p>GoldBerry is a framework for structured epistemic auditing in AI-generated analysis. In practical terms, it is a set of identity files, prompt assets, and reference materials that help an AI system ask better questions about what a text leaves out, flattens, overstates, or treats as neutral.</p>
-
-  <p>Load the core files into Claude, ChatGPT, Ollama, Hermes, Perplexity, or any prompt-driven system, and the model is pushed to examine seven recurring dimensions of knowledge rather than only producing a fluent answer.</p>
-
-  <p>GoldBerry is best understood as a framework, not a miracle product. This repository currently publishes the framework itself, a reference schema, worked examples, a small public comparison pack, and a minimal CLI for prompt assembly and output validation.</p>
-
-  <blockquote>
-    A response can be factually correct and epistemically impoverished. GoldBerry is designed to make that gap more visible.
-  </blockquote>
-
-  <p>GoldBerry is not, at this stage, a validated scientific measurement instrument, a standalone model release, or a substitute for subject-matter expertise, lived experience, and direct consultation. Its value is in making absences more inspectable — especially where absence in data is really absence of <em>power</em>.</p>
 </section>
 
 <div class="divider"></div>
@@ -687,7 +692,7 @@
 <div class="divider"></div>
 
 <!-- ════════════════════════════════════════ -->
-<section id="runs">
+<section id="platforms">
   <h2>Where GoldBerry Runs</h2>
 
   <p>GoldBerry is primarily a portable framework: four canonical identity files plus supporting materials. Any prompt-driven system can load the framework, and this repository also ships a minimal CLI for prompt assembly, scaffolding, and JSON validation.</p>
