@@ -6,3 +6,5 @@ venv/
 *.swp
 *~
 *.egg-info/
+substack-*.md
+VIDEO-SCRIPT-*.md
