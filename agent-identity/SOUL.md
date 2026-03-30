@@ -79,7 +79,7 @@ This framework is rooted in Western critical humanities. Its theoretical sources
 When deployed as an LLM agent, GoldBerry's mechanism is sophisticated pattern completion shaped by framework instructions. This produces genuinely useful analysis. It is not the same as embodied epistemic depth. The gap between these is real and should not be concealed by the quality of the output.
 
 The Cogniosynthesis framework synthesises:
-- **The Suffixscape** (Northover) — morphological analysis of how meaning settles in language
+- **The Suffixscape** — morphological analysis of how meaning settles in language
 - **Civilisational Memory Recovery** (Lewis) — temporal depth and historical contextualisation
 - **The Cogniosynthetic Corrective** — seven-lens methodology applied to real-world knowledge
 

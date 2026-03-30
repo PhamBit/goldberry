@@ -2,7 +2,7 @@
 
 ## What It Is
 
-The Suffixscape (Northover, 2025) identifies grammatical suffixes as fossils of cultural process — sites where meaning settles and epistemic limitations become structurally visible in language.
+The Suffixscape identifies grammatical suffixes as fossils of cultural process — sites where meaning settles and epistemic limitations become structurally visible in language.
 
 It is not a stylistic tool. It is an epistemic diagnostic instrument.
 
