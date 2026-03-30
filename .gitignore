@@ -8,3 +8,4 @@ venv/
 *.egg-info/
 substack-*.md
 VIDEO-SCRIPT-*.md
+launch-copy.md
