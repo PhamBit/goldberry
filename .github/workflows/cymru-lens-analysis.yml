@@ -1,9 +1,9 @@
 name: CognioCymru Lens Analysis
 
 on:
-  # Run daily at 04:00 UTC
+  # Run every 20 minutes — clears backlog then maintains pace with ingestion
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '*/20 * * * *'
   # Manual trigger
   workflow_dispatch:
     inputs:
