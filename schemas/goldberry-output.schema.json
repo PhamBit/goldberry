@@ -40,7 +40,8 @@
         "scientific_evidence",
         "artistic_perception",
         "future_modelling",
-        "marginalised_voices"
+        "marginalised_voices",
+        "trickster_knowledge"
       ],
       "properties": {
         "indigenous_knowledge": {
@@ -68,6 +69,10 @@
           "minLength": 1
         },
         "marginalised_voices": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trickster_knowledge": {
           "type": "string",
           "minLength": 1
         }

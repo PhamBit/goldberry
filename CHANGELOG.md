@@ -4,6 +4,21 @@ All notable changes to the GoldBerry framework are documented here.
 
 GoldBerry versions represent refinements of the epistemic completeness framework — each version is the framework examining and correcting itself.
 
+## [1.2.0] — 2026-04-25
+
+### Added
+- **Lens 8: Trickster Knowledge.** Adds disciplined disruption (inversion, irony, satire, paradox) as the eighth lens. Addresses the "Seven-Lens Closure" control problem named in REFLEXIVE-AUDIT-v1.md §2. Theoretical roots: Hyde (Trickster Makes This World), Bakhtin (carnival, dialogic inversion), Erasmus (In Praise of Folly).
+- `whats_missing.trickster_knowledge` field added to `schemas/goldberry-output.schema.json` and to the Python validator in `src/goldberry/schemas.py`.
+
+### Changed
+- README, identity files, and platform examples (Ollama, ChatGPT, Perplexity, Hermes, Claude Code, generic system prompt) updated to reference eight lenses.
+- `Beyond Seven` section in LENSES.md renamed `Beyond Eight`; Comedic/Trickster Knowledge removed from candidate-gaps list (now operational).
+- REFLEXIVE-AUDIT-v1.md: open question at line 136 ("who proposes Lens 8?") marked resolved.
+
+### Notes
+- Adding Lens 8 partially closes the seven-lens closure critique but does not eliminate it. Eight is still finite; the framework remains asymptotic to completeness.
+- Historical case-study analyses (`aisi-*`, `anthropic-constitution-*`, `bbc-homepage-*`) were **not** rewritten — they remain accurate point-in-time records of seven-lens analyses.
+
 ## [0.1.0] — 2026-03-28
 
 ### Changed

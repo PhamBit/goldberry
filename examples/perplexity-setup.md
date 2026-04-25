@@ -4,7 +4,7 @@
 
 Perplexity searches the live web. GoldBerry audits what it finds
 for epistemic completeness. Together: real-time information run
-through seven analytical lenses. This is one of the most powerful
+through eight analytical lenses. This is one of the most powerful
 combinations — current events analysed for structural absence.
 
 ## Setup
@@ -27,18 +27,18 @@ reference the GoldBerry framework in its responses.
 
 ### Option C: In-Prompt Loading
 
-Simply paste the seven lens definitions at the start of your
+Simply paste the eight lens definitions at the start of your
 prompt:
 
-"Using the GoldBerry epistemic completeness framework (7 lenses:
+"Using the GoldBerry epistemic completeness framework (8 lenses:
 Indigenous Knowledge, Deep History, Cross-Cultural Wisdom,
 Scientific Evidence, Artistic Perception, Future Modelling,
-Marginalised Voices), analyse: [your query]"
+Marginalised Voices, Trickster Knowledge), analyse: [your query]"
 
 Even this minimal invocation shifts the output significantly.
 
 ## Example
 
-"Using GoldBerry's seven lenses, analyse today's BBC News front page.
+"Using GoldBerry's eight lenses, analyse today's BBC News front page.
 What is epistemically missing? Run a Suffixscape audit on the
 headlines."

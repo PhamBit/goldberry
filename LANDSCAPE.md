@@ -103,7 +103,7 @@ No project found in this survey provides all seven. Most provide one or two. Thi
 ### rfxlamia/skillkit — Framework Critical Thinking (LobeHub)
 - **What it does:** Agent skill for metacognition and self-correction. Published March 2026.
 - **What it doesn't do:** Generic metacognitive prompting. No specific epistemic lenses, no Suffixscape, no eval pack, no concept of structural absence.
-- **Gap:** "Think critically" as a skill. GoldBerry specifies WHAT to think critically about across seven named dimensions.
+- **Gap:** "Think critically" as a skill. GoldBerry specifies WHAT to think critically about across eight named dimensions.
 
 ---
 
@@ -112,7 +112,7 @@ No project found in this survey provides all seven. Most provide one or two. Thi
 ### Epistemic Alignment Framework (arXiv 2504.01205, April 2025)
 - **What it does:** Proposes ten challenges in knowledge transmission between users and LLMs. Philosophical framework for epistemic alignment.
 - **What it doesn't do:** Theoretical paper. Not operationalised as agent-loadable files. No linguistic diagnostics. No eval pack. No open-source implementation.
-- **Relationship to GoldBerry:** Complementary. Their ten challenges address user-LLM knowledge transmission. GoldBerry's seven lenses address what knowledge is structurally absent from LLM outputs. Different problems, compatible frameworks.
+- **Relationship to GoldBerry:** Complementary. Their ten challenges address user-LLM knowledge transmission. GoldBerry's eight lenses address what knowledge is structurally absent from LLM outputs. Different problems, compatible frameworks.
 - **Gap:** Theory without tooling vs tooling grounded in theory.
 
 ### Epistemic AI (EU Horizon 2020 project, epistemic-ai.eu)
@@ -182,7 +182,7 @@ No tool found in this survey combines these four specific diagnostics as an inte
 ## What We Can Learn From Each
 
 - **Constitutional AI:** The principle of self-critique is powerful. GoldBerry already does this (Reflexive Audit). Worth monitoring how Anthropic evolves their constitution.
-- **Epistemic Alignment Framework (arXiv):** The ten challenges are complementary to our seven lenses. Potential academic collaboration.
+- **Epistemic Alignment Framework (arXiv):** The ten challenges are complementary to our eight lenses. Potential academic collaboration.
 - **Epistemic justice literature:** The theoretical foundation GoldBerry operationalises. Cite this work properly.
 - **Media Bias Detector:** Their quantitative methods could complement GoldBerry's structural analysis. Different layers, potentially stackable.
 - **FCT Skill:** Shows the pattern of agent-loadable skills is emerging. GoldBerry is ahead but the format is becoming normalised.

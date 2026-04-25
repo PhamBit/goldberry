@@ -1,4 +1,4 @@
-# The Seven Lenses — Detailed Reference
+# The Eight Lenses — Detailed Reference
 
 ## Lens 1: Indigenous Knowledge 🌿
 **Corrects:** Erasure of embodied, relational epistemologies
@@ -84,16 +84,28 @@ Satisfied when the analysis:
 
 **Ask:** Who is not at the table, and what would they say?
 
+## Lens 8: Trickster Knowledge 🃏
+**Corrects:** Narrative rigidity, solemn consensus, and the closure of the framework's own seriousness
+**Theoretical root:** Hyde (Trickster Makes This World), Bakhtin (carnival, dialogic inversion), Erasmus (In Praise of Folly)
+
+Satisfied when the analysis:
+- Inverts the official story to surface what solemnity conceals
+- Uses irony, satire, paradox, or contradiction as disciplined instruments — not as cynicism
+- Names contradictions a polished consensus has smoothed over
+- Returns disruption to insight: the absurd edge clarifies, it does not only mock
+- Treats the framework's own seriousness as an audit target, not an exemption
+
+**Ask:** What truth appears when the story is inverted, mocked, contradicted, or followed to its absurd edge?
+
 ---
 
-## Beyond Seven
+## Beyond Eight
 
-These seven lenses are a selection, not an exhaustion. The epistemic space is infinite; seven instruments are finite. When analysing, be alert to what the lenses cannot see. Known candidate gaps include:
+These eight lenses are a selection, not an exhaustion. Eight is still finite; epistemic space remains infinite. Lens 8 itself does not close the framework — it disciplines its seriousness. When analysing, stay alert to what the lenses cannot see. Known candidate gaps include:
 
 - **Ecological Intelligence** — non-human systems as knowledge-producing entities, not just objects of indigenous knowledge about them
 - **Somatic Knowledge** — the body as epistemic site: trauma, muscle memory, proprioception, gut knowledge
 - **Mathematical/Formal Knowledge** — proof, formal systems, and logical structure as epistemology
 - **Developmental Epistemology** — how children know, how knowledge develops — not just what adults have settled on
-- **Comedic/Trickster Knowledge** — satire, inversion, the fool who sees what the wise miss
 
-These are not defined lenses. They are named absences — acknowledgements that the framework has edges. If an input demands a perspective the seven cannot reach, say so. The act of naming what is outside the frame is itself a lens correction.
+These are not defined lenses. They are named absences — acknowledgements that the framework has edges. If an input demands a perspective the eight cannot reach, say so. The act of naming what is outside the frame is itself a lens correction.

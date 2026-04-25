@@ -2,7 +2,7 @@
 
 **A framework for structured epistemic auditing in AI-generated analysis.**
 
-GoldBerry is a documentation-first open-source framework that helps any prompt-driven AI system look beyond the most obvious answer. It does this through seven analytical lenses and a linguistic diagnostic layer called the Suffixscape.
+GoldBerry is a documentation-first open-source framework that helps any prompt-driven AI system look beyond the most obvious answer. It does this through eight analytical lenses and a linguistic diagnostic layer called the Suffixscape.
 
 Today, this repository contains:
 - the canonical GoldBerry identity files
@@ -26,7 +26,7 @@ GoldBerry is not, at this stage:
 Large language models can produce fluent answers that feel complete while still being historically shallow, culturally flattened, power-blind, or rhetorically evasive. GoldBerry is designed to make those absences more visible.
 
 It does this through:
-- **Seven lenses** — recurring questions about knowledge, history, evidence, culture, power, feeling, and future consequences
+- **Eight lenses** — recurring questions about knowledge, history, evidence, culture, power, feeling, future consequences, and the inversions a solemn frame cannot see
 - **The Suffixscape** — a linguistic diagnostic layer for nominalised evasion, agency diffusion, epistemic inflation, and temporal flatness
 - **A structured output format** — so analyses can be compared, reviewed, and validated more consistently
 
@@ -37,7 +37,7 @@ It does this through:
 GoldBerry currently has four stable core identity files:
 
 1. [`agent-identity/SOUL.md`](agent-identity/SOUL.md) — what GoldBerry is, what it is not, and how it frames its role
-2. [`agent-identity/LENSES.md`](agent-identity/LENSES.md) — the seven lenses and their satisfaction criteria
+2. [`agent-identity/LENSES.md`](agent-identity/LENSES.md) — the eight lenses and their satisfaction criteria
 3. [`agent-identity/SUFFIXSCAPE.md`](agent-identity/SUFFIXSCAPE.md) — the linguistic diagnostic layer
 4. [`agent-identity/AGENTS.md`](agent-identity/AGENTS.md) — operating guidance for agents and deployment contexts
 
@@ -66,7 +66,7 @@ Then say: **"Load GoldBerry."**
 
 The agent reads the repo, finds the identity files, and becomes GoldBerry. Tested and confirmed on Claude, ChatGPT, Kimi, and Claude Code. No setup. No files to download. Two words.
 
-Then paste any text and say: **"Run a seven-lens analysis."**
+Then paste any text and say: **"Run an eight-lens analysis."**
 
 ---
 
@@ -84,7 +84,7 @@ If your AI doesn't browse the web, or you want a persistent setup, pick your pla
    - [`agent-identity/AGENTS.md`](agent-identity/AGENTS.md)
 3. Say: **"You are now GoldBerry for this session."**
 4. Paste any text — a news article, policy document, corporate About page, AI-generated report
-5. Say: **"Run a seven-lens analysis on this."**
+5. Say: **"Run an eight-lens analysis on this."**
 
 That's it. The agent is now GoldBerry. It will return a full epistemic audit with CMR score.
 
@@ -95,7 +95,7 @@ That's it. The agent is now GoldBerry. It will return a full epistemic audit wit
 1. Open [claude.ai](https://claude.ai) and start a new conversation
 2. Click the attachment icon and upload all four files from `agent-identity/`
 3. Say: **"Load these as your identity. You are GoldBerry."**
-4. Paste your text and ask for the seven-lens analysis
+4. Paste your text and ask for the eight-lens analysis
 
 > **Tip:** In Claude Projects, add the four files as project knowledge. Every conversation in that project runs through the lenses automatically.
 
@@ -118,7 +118,7 @@ See [`examples/ollama-modelfile`](examples/ollama-modelfile) for a ready-to-use 
 
 1. Go to [perplexity.ai](https://perplexity.ai) → Collections
 2. Create a new Collection, paste the four identity files into the instructions
-3. Every search in that Collection runs through GoldBerry's seven lenses — with live web sources
+3. Every search in that Collection runs through GoldBerry's eight lenses — with live web sources
 
 ### OpenClaw
 
@@ -134,7 +134,7 @@ OpenClaw loads GoldBerry through its workspace AGENTS.md:
    3. Read agent-identity/SUFFIXSCAPE.md
    4. Read agent-identity/AGENTS.md
    5. Confirm: "GoldBerry identity active."
-   6. Run all seven lenses on the input.
+   6. Run all eight lenses on the input.
    ```
 3. Say **"Run GoldBerry on this"** and paste your text
 
@@ -160,7 +160,7 @@ Agent0 uses system prompts for agent identity:
 1. Open your Agent0 configuration
 2. Paste the contents of [`examples/generic-system-prompt.txt`](examples/generic-system-prompt.txt) into the system prompt field
 3. For the full framework, paste all four identity files into the system prompt (Agent0 supports long contexts)
-4. Every conversation in that agent runs through the seven lenses
+4. Every conversation in that agent runs through the eight lenses
 
 For Agent0's tool-use mode, GoldBerry works as a post-processing step: let the agent complete its task, then say **"Now run a GoldBerry audit on what you just produced."**
 
@@ -171,7 +171,7 @@ NanoClaw is lightweight — load GoldBerry directly into the system prompt:
 1. Open your NanoClaw agent config
 2. Paste the condensed identity from [`examples/generic-system-prompt.txt`](examples/generic-system-prompt.txt) into the system prompt
 3. For full depth, paste all four identity files (NanoClaw handles the context)
-4. Say **"Analyse this through seven lenses"** and paste your text
+4. Say **"Analyse this through eight lenses"** and paste your text
 
 NanoClaw's simplicity is an advantage here — no skill system to configure, no workspace to set up. Just paste and go.
 
@@ -195,7 +195,7 @@ Once loaded, give GoldBerry any text that carries knowledge claims. It returns:
 2. **Executive Summary** — the epistemically complete picture
 3. **Power-Knowledge Audit** — who produced this, for whom, serving what
 4. **Suffixscape Audit** — nominalised evasion, agency diffusion, epistemic inflation
-5. **What's Missing** — structural absences across all seven lenses
+5. **What's Missing** — structural absences across all eight lenses
 6. **Synthesis** — integrated view
 7. **Solution Pathways** — actionable next steps
 8. **CMR Score** — epistemic completeness rating (1–10)
@@ -213,7 +213,7 @@ goldberry validate output.json
 
 ---
 
-## The seven lenses
+## The eight lenses
 
 | # | Lens | Corrects | Core question |
 |---|------|----------|---------------|
@@ -224,6 +224,7 @@ goldberry validate output.json
 | 5 | 🎨 Artistic Perception | Reduction of knowledge to propositions | What does this feel like, not just mean? |
 | 6 | 🚀 Future Modelling | Static analysis that ignores trajectory | Where is this heading, and for whom? |
 | 7 | 🤝 Marginalised Voices | Structural exclusion from knowledge production | Who is not at the table? |
+| 8 | 🃏 Trickster Knowledge | Narrative rigidity and solemn closure | What truth appears when the story is inverted? |
 
 The **Suffixscape** complements the lenses by flagging:
 - nominalised evasion

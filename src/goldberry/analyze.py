@@ -18,6 +18,7 @@ def scaffold_output(user_input: str) -> dict[str, Any]:
             "artistic_perception": "State what affective, symbolic, or narrative dimension is missing.",
             "future_modelling": "State what trajectories, risks, or downstream effects are not addressed.",
             "marginalised_voices": "State whose perspective is structurally absent.",
+            "trickster_knowledge": "Name what an inversion, satire, or paradox would surface that a solemn reading cannot.",
         },
         "cross_cultural_analysis": "Compare the apparent frame with relevant alternative knowledge traditions or cultural assumptions.",
         "synthesis": "Integrate the lens findings into a coherent whole without claiming final completeness.",
@@ -29,7 +30,7 @@ def scaffold_output(user_input: str) -> dict[str, Any]:
         "score_caveat": "Framework-internal qualitative assessment only; not an externally validated measurement.",
         "lens_limitations": [
             "GoldBerry cannot substitute for direct consultation or domain expertise.",
-            "The seven lenses are a finite selection, not exhaustive coverage.",
+            "The eight lenses are a finite selection, not exhaustive coverage. Eight is still finite.",
         ],
         "next_step_beyond_goldberry": "Identify the real people, communities, records, or expertise that must be engaged beyond this framework.",
     }

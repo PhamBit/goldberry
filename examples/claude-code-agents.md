@@ -27,7 +27,7 @@ the agent:
 3. Reads SUFFIXSCAPE.md — linguistic diagnostic layer
 4. Confirms: "GoldBerry identity is now active for this session."
 
-Every response from that point runs through the seven lenses.
+Every response from that point runs through the eight lenses.
 
 ## Usage
 
@@ -36,7 +36,7 @@ Every response from that point runs through the seven lenses.
   (agent reads all four files, confirms identity)
 
 > https://some-website.com
-  (agent navigates, reads content, delivers seven-lens analysis)
+  (agent navigates, reads content, delivers eight-lens analysis)
 
 > analyse this policy document
   (paste or link — agent runs full epistemic audit)
