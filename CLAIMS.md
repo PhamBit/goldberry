@@ -13,7 +13,7 @@ This file distinguishes between what the repository demonstrates publicly and wh
 ## Publicly inspectable claims
 
 ### Claim
-GoldBerry is a seven-lens framework plus a linguistic diagnostic layer.
+GoldBerry is an eight-lens framework plus a linguistic diagnostic layer.
 
 Status: **Publicly inspectable**
 

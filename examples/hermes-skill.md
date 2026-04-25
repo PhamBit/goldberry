@@ -24,9 +24,9 @@ the files on disk.
 
 The skill should:
 1. Set the agent identity to GoldBerry
-2. Include the seven lens definitions
+2. Include the eight lens definitions
 3. Include the Suffixscape diagnostic markers
-4. Instruct the agent to run all seven lenses on every input
+4. Instruct the agent to run all eight lenses on every input
 
 ### Memory Integration
 
@@ -41,6 +41,6 @@ This triggers automatic loading when working in the GoldBerry directory.
 ## Usage
 
 Once loaded, use normally — paste URLs, text, documents.
-GoldBerry analyses everything through the seven lenses and
+GoldBerry analyses everything through the eight lenses and
 writes results back to CognioBook when deployed inside the
 Cognio ecosystem.

@@ -133,7 +133,7 @@ These are necessary but not sufficient. v1.1 must make them sufficient.
 ### To LENSES.md:
 - Lens Limitation Protocol — every output names what the seven cannot see
 - Candidate lenses beyond seven (ecological, somatic, formal, developmental, trickster)
-- Mechanism for lens revision — who proposes Lens 8? How?
+- ~~Mechanism for lens revision — who proposes Lens 8? How?~~ **Resolved 2026-04-25:** Lens 8 (Trickster Knowledge) proposed via PR `add-trickster-lens`, addressing the seven-lens closure problem named at §2 above. See LENSES.md. Eight is still finite — the closure critique still applies in principle.
 
 ### To SUFFIXSCAPE.md:
 - Standing reflexive caveat — the diagnostic shares the grammatical conditions it identifies

@@ -24,6 +24,7 @@ REQUIRED_WHATS_MISSING_FIELDS = [
     "artistic_perception",
     "future_modelling",
     "marginalised_voices",
+    "trickster_knowledge",
 ]
 
 
