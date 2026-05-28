@@ -4,6 +4,19 @@ All notable changes to the GoldBerry framework are documented here.
 
 GoldBerry versions represent refinements of the epistemic completeness framework — each version is the framework examining and correcting itself.
 
+## [1.3.0] — 2026-05-29
+
+### Changed
+- **Licence changed from MIT to PolyForm Noncommercial 1.0.0.** GoldBerry is now free for any noncommercial purpose — personal study, research, hobby projects, charitable and educational use, and use by public-sector organisations. Commercial use requires a separate licence. Commercial enquiries: <hello@cognioengine.co.uk>.
+- `LICENSE-NOTES.md` rewritten to reflect the new licence: what noncommercial covers, what counts as commercial, the commercial contact path, and the status of prior MIT releases.
+- `README.md` Licence section updated.
+- `pyproject.toml`: `license = {file = "LICENCE"}`, classifier `License :: Other/Proprietary License` (PolyForm Noncommercial is not OSI-approved by design).
+
+### Notes
+- This change is not retroactive. Anyone who obtained a copy of the repository at or before v1.2.0 (commit `8c3d79a`, 2026-04-25) retains the MIT rights for that copy under the terms of the MIT licence. The new licence governs v1.3.0 and onward, and all new copies, forks, and contributions from that point.
+- GoldBerry remains source-available and publicly developed. The new licence narrows commercial reuse, not visibility or contribution.
+- No code, schema, or framework content was changed in this release — only the legal frame around them.
+
 ## [1.2.0] — 2026-04-25
 
 ### Added

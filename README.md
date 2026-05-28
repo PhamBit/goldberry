@@ -330,9 +330,13 @@ Please read:
 
 ## Licence
 
-This repository is released under the MIT licence. See [`LICENCE`](LICENCE).
+This repository is released under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0). See [`LICENCE`](LICENCE).
 
-Because GoldBerry is also a named framework with public-facing branding and methodological claims, please also read [`LICENSE-NOTES.md`](LICENSE-NOTES.md) for plain-English guidance on reuse, attribution, and what the repository does and does not claim.
+GoldBerry is free to use for any **noncommercial purpose** — including personal study, research, hobby projects, charitable and educational use, and use by public-sector organisations. **Commercial use requires a separate licence — contact <hello@cognioengine.co.uk>.**
+
+Versions on or before 1.2.0 were released under MIT and remain MIT for anyone who obtained the repository under that licence.
+
+Because GoldBerry is also a named framework with public-facing branding and methodological claims, please also read [`LICENSE-NOTES.md`](LICENSE-NOTES.md) for plain-English guidance on noncommercial vs. commercial use, attribution, and what the repository does and does not claim.
 
 ---
 

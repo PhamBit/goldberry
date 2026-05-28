@@ -23,7 +23,7 @@ GoldBerry's current public distinctiveness appears to come from this combination
 4. **Linguistic diagnostics** — detects grammatical patterns that conceal agency and meaning (Suffixscape)
 5. **Inspectable evaluation** — public eval pack with baselines, outputs, evaluator notes
 6. **Self-aware limits** — explicitly names its own edges and what it cannot see
-7. **Open source** — MIT licensed, fully public
+7. **Source-available** — PolyForm Noncommercial 1.0.0 (commercial use requires a separate licence), publicly developed, full materials inspectable
 
 No project found in this survey provides all seven. Most provide one or two. This combination — not any single feature — is the basis of the distinctiveness claim.
 
@@ -161,7 +161,7 @@ No tool found in this survey combines these four specific diagnostics as an inte
 
 *This matrix is a compression aid, not a substitute for the per-project notes above. Partial overlaps matter more than a simple tick/cross reading suggests.*
 
-| Project | Agent-loadable | Epistemic auditing | Named lenses | Linguistic diagnostics | Eval pack | Self-aware limits | Open source |
+| Project | Agent-loadable | Epistemic auditing | Named lenses | Linguistic diagnostics | Eval pack | Self-aware limits | Source-available |
 |---------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | **GoldBerry** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Guardrails AI | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
@@ -201,4 +201,4 @@ The current public position appears defensible, subject to continued challenge a
 
 *This document will be updated as new projects are identified. If you know of comparable work, please open an issue: github.com/PhamBit/goldberry/issues*
 
-*© Cogniosynthesis Ltd. MIT Licensed.*
+*© Cogniosynthesis Ltd. PolyForm Noncommercial 1.0.0 Licensed. Commercial enquiries: <hello@cognioengine.co.uk>.*
